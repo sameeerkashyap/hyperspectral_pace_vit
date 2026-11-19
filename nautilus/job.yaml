@@ -1,0 +1,56 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pace-spectral-validation
+spec:
+  completionMode: Indexed
+  completions: 6
+  parallelism: 2
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: experiment
+          image: ghcr.io/YOUR_ORG/pace-experiments:VERSION
+          args: ["python", "-m", "src.runner", "--plan", "experiments/sample.json"]
+          env:
+            - name: JOB_COMPLETION_INDEX
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
+            - name: DATA_DIR
+              value: /results/data
+            - name: OUTPUT_ROOT
+              value: /results/sample-v1
+            - name: OMP_NUM_THREADS
+              value: "4"
+          resources:
+            requests:
+              cpu: "4"
+              memory: 8Gi
+              ephemeral-storage: 12Gi
+              nvidia.com/gpu: "1"
+            limits:
+              cpu: "4"
+              memory: 8Gi
+              ephemeral-storage: 20Gi
+              nvidia.com/gpu: "1"
+          volumeMounts:
+            - name: results
+              mountPath: /results
+            - name: runtime
+              mountPath: /runtime
+            - name: shared-memory
+              mountPath: /dev/shm
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: pace-experiment-results
+        - name: runtime
+          emptyDir:
+            sizeLimit: 20Gi
+        - name: shared-memory
+          emptyDir:
+            medium: Memory
+            sizeLimit: 1Gi

@@ -1,0 +1,233 @@
+<div align="center">
+
+# PACE ViT
+
+**Learning ocean color across wavelengths**
+
+Spectral and spatial vision transformers for NASA PACE OCI ocean-color data.
+
+[Quick start](#quick-start) · [Architecture](#architecture) · [Results](#early-results) · [Documentation](#documentation)
+
+![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/Built_with-PyTorch-EE4C2C?logo=pytorch&logoColor=white)
+![Research prototype](https://img.shields.io/badge/Status-Research_prototype-0D9488)
+
+![Concept illustration of a satellite observing ocean blooms through spectral waves.](docs/assets/pace-ocean-banner.png)
+
+<sub>AI-generated concept illustration. The waves represent spectral observations; this is not satellite imagery.</sub>
+
+</div>
+
+## Overview
+
+PACE ViT studies whether learning the spectrum of light leaving the ocean can
+improve chlorophyll-a prediction. It uses NASA PACE Ocean Color Instrument
+(OCI) Level-2 remote-sensing reflectance (`Rrs`), with quality screening,
+masked reconstruction, and supervised prediction on matched scenes.
+
+The project provides:
+
+- **Two token designs:** one token per wavelength and spatial patch, or one
+  token per spatial patch containing the full spectrum.
+- **A chlorophyll benchmark:** five model variants across three seeds, including
+  a spectral MLP and the same spatial transformer with and without pretraining.
+- **Data checks:** packed-value decoding, quality flags, scene alignment, and
+  separation of training, validation, and test dates and regions.
+- **Experiment tools:** checksum-verified downloads, saved metrics and weights,
+  notebook execution, and Docker/Nautilus templates.
+
+**Current milestone:** run the chlorophyll benchmark on real matched scenes.
+The reconstruction pilot is complete. Biological accuracy and EMIT-to-PACE
+transfer remain unvalidated.
+
+## Quick start
+
+Use Python 3.11 or later and [uv](https://docs.astral.sh/uv/).
+Run these commands from the repository root:
+
+```sh
+git clone https://github.com/sameeerkashyap/hyperspectral_pace_vit.git
+cd hyperspectral_pace_vit
+uv sync
+
+# Download the two public teaching samples.
+uv run python -m data.dataset_download.sample
+
+# Inspect their fields and run the tests.
+uv run python -m data.dataset_download.inspect data/raw/*.nc
+uv run python -m unittest discover -s tests -v
+```
+
+To run one reconstruction experiment, including a verified input download:
+
+```sh
+uv run python -m src.runner --plan experiments/sample.json --index 0
+```
+
+This runs the first 500-step experiment. Omit `--index 0` to run all six
+experiments in sequence. Results go to `outputs/`; the runner refuses to
+replace an existing experiment directory. Use `--output-root outputs/new-run`
+for a new run.
+
+For a shorter check after downloading the samples:
+
+```sh
+uv run python -m src.experiment \
+  --aop data/raw/PACE_OCI.20240730T181157.L2.OC_AOP.V2_0.NRT.nc \
+  --steps 30 --chips 16 --threads 1 --output outputs/quick-check
+```
+
+## Architecture
+
+A masked autoencoder learns to reconstruct hidden input patches. Its encoder
+can then feed a dense prediction head, which produces one chlorophyll estimate
+per pixel.
+
+```mermaid
+flowchart LR
+    A["Quality-screened reflectance"] --> B["Patch tokens"]
+    B --> C["Pretrain: hide tokens"]
+    C --> D["Transformer encoder"]
+    D --> E["Decoder: reconstruct reflectance"]
+    B --> F["Fine-tune encoder: all tokens"]
+    F --> G["Dense head: log10 chlorophyll"]
+    H["Matched BGC targets"] --> I["Valid-pixel loss"]
+    G --> I
+```
+
+| Design | Token content | Tokens for a 128 × 128 chip with 172 bands |
+| --- | --- | ---: |
+| `WavelengthAwareMAE` | One wavelength in a 4 × 4 spatial patch | 176,128 |
+| `SpatialSpectralMAE` | All wavelengths in a 4 × 4 spatial patch | 1,024 |
+
+The wavelength model uses physical wavelength positions and accepts different
+band counts. The spatial model reduces the number of tokens, but uses a fixed
+spectral grid and compresses the full spectrum at the input. Cross-sensor
+transfer still needs spectral alignment and separate validation.
+
+Spatial-model inputs have shape `[batch, bands, height, width]`.
+The chlorophyll head returns `[batch, 1, height, width]` in log10 concentration;
+`10 ** prediction` converts it to mg m⁻³.
+See the [architecture guide](docs/architecture.md) for tensor shapes, defaults,
+masking details, and a runnable model example.
+
+## Early results
+
+The saved pilot used **one real PACE scene, one seed, 30 CPU training steps,
+and at most 16 chips per split**. It tested reconstruction on spatially held-out
+chips, including wavelengths absent from training.
+
+| Method | Seen-band RMSE ↓ | Unseen-band RMSE ↓ |
+| --- | ---: | ---: |
+| Wavelength positions | 0.001931 | 0.002049 |
+| Band-index positions | 0.002042 | 0.002119 |
+| Training-mean spectrum | 0.002340 | 0.002189 |
+| Visible-band interpolation | 0.003291 | 0.003510 |
+
+RMSE is root mean square error, in sr⁻¹. The wavelength model's unseen-band
+error was about 3.3% lower than the band-index model's. This small pilot checks
+the pipeline; it does not establish a reliable advantage or chlorophyll accuracy.
+Residuals remain large relative to the reported measurement uncertainty.
+
+[Experiment design and interpretation](docs/experiment_design.md) ·
+[Saved metrics and split coordinates](docs/pilot_results.json)
+
+## Data and validation
+
+| Input | Contents | Use |
+| --- | --- | --- |
+| OCI L2 AOP | Reflectance (`Rrs`), uncertainty, optical fields | Model input and reconstruction |
+| OCI L2 BGC | Chlorophyll-a (`chlor_a`), phytoplankton carbon (`carbon_phyto`) | Matched satellite-derived targets |
+| Navigation and flags | Latitude, longitude, acquisition time, quality flags | Alignment and screening |
+
+The public AOP example has **184 reflectance bands from 339–719 nm**.
+Read `sensor_band_parameters/wavelength_3d` for the `Rrs` spectral axis;
+the separate sensor-wide `wavelength` array does not match it.
+The benchmark uses native bands between 400 and 700 nm.
+
+> The teaching AOP and BGC files have different acquisition dates and processing
+> versions. They cannot form a training pair or support reflectance–concentration
+> correlation. Use current, matched research products for the benchmark.
+
+The [download manifest](data/manifest.json) records sample URLs, sizes, and
+SHA-256 hashes. Raw data, local environments, and run outputs stay out of Git.
+NASA research downloads may require Earthdata credentials; keep credentials
+outside the repository and container image.
+
+To analyze a valid matched pair:
+
+```sh
+uv run python -m src.correlate path/to/AOP.nc path/to/BGC.nc \
+  --output data/correlations.json
+```
+
+Satellite chlorophyll and carbon products are estimates from optical signals.
+Independent field measurements are still needed to test biological accuracy.
+The current predictors produce point estimates without calibrated uncertainty.
+
+## Chlorophyll benchmark
+
+The [main plan](experiments/chlorophyll.json) compares five variants across
+three paired seeds:
+
+| Variant | Training path |
+| --- | --- |
+| `mlp` | Spectral MLP baseline |
+| `spectral` | Wavelength-token reconstruction, then supervised prediction |
+| `spatial` | Full-spectrum spatial reconstruction, then supervised prediction |
+| `mixed` | Wavelength tokens with spectral-span and spatial-patch masking |
+| `spatial-scratch` | Same spatial predictor, trained without pretraining |
+
+Provide matched AOP/BGC scenes using the
+[scene-manifest example](experiments/chlorophyll-scenes.example.json).
+The loader requires separate dates and non-overlapping regions across splits.
+The plan has no dataset URLs because real matched inputs have not been supplied.
+
+```sh
+uv run python -m src.benchmark --scenes /path/to/scenes.json \
+  --data-dir /path/to/netcdf --arm spatial --output outputs/chlorophyll-spatial
+```
+
+See the [benchmark guide](docs/chlorophyll_benchmark.md) for all 15 runs,
+checkpoint selection, metrics, and the wider-model comparison. Docker and
+Nautilus files are templates; set the image, namespace, storage, and inputs
+before use. Follow the [runtime guide](docs/running_experiments.md).
+
+## Documentation
+
+| Guide | Contents |
+| --- | --- |
+| [Architecture](docs/architecture.md) | Model interfaces, tensor shapes, diagrams, and examples |
+| [Experiment design](docs/experiment_design.md) | Reconstruction controls, pilot results, and evidence limits |
+| [Chlorophyll benchmark](docs/chlorophyll_benchmark.md) | Matched scenes, five variants, training, and evaluation |
+| [Running experiments](docs/running_experiments.md) | Local runs, Docker, Nautilus, scripts, and notebooks |
+| [Sample findings](docs/sample_findings.md) | Observed properties and limits of the teaching files |
+| [Field inventory](docs/fields.md) | NetCDF fields, dimensions, and units |
+| [Wavelength transfer](docs/wavelength_transfer.md) | EMIT/PACE differences and proposed transfer tests |
+
+```text
+src/             Models, data checks, training, and experiment runners
+tests/           Model, runner, and generated NetCDF fixture tests
+experiments/     Run plans, scene-manifest example, and training notebook
+data/            Download tools and sample provenance
+docs/            Research design, data inventory, and saved pilot results
+container/       Runtime dependency setup
+nautilus/        Job and persistent-storage templates
+```
+
+## References
+
+- Prochaska & Frouin (2025), [On the challenges of retrieving phytoplankton
+  properties from remote-sensing observations](https://doi.org/10.5194/bg-22-4705-2025).
+  Research motivation for independent validation and uncertainty analysis.
+- NASA: [OCI data access](https://nasa.github.io/oceandata-notebooks/notebooks/oci/oci_data_access.html)
+  and [file structure](https://nasa.github.io/oceandata-notebooks/notebooks/oci/oci_file_structure.html).
+- [DOFA](https://arxiv.org/abs/2403.15356) and
+  [HyperFree](https://openaccess.thecvf.com/content/CVPR2025/html/Li_HyperFree_A_Channel-adaptive_and_Tuning-free_Foundation_Model_for_Hyperspectral_Remote_CVPR_2025_paper.html):
+  related work on spectral adaptation.
+- HyperCoast [AOP](https://hypercoast.org/examples/pace/) and
+  [BGC](https://hypercoast.org/examples/pace_oci_l2/) tutorials: public teaching samples.
+
+OETHER served as an architecture reference. The PACE implementation is local
+to this repository and has no OETHER runtime dependency. No pretrained model
+weights are included.

@@ -1,0 +1,84 @@
+{
+  "datasets": [
+    {
+      "file": "PACE_OCI.20240730T181157.L2.OC_AOP.V2_0.NRT.nc",
+      "url": "https://github.com/opengeos/datasets/releases/download/hypercoast/PACE_OCI.20240730T181157.L2.OC_AOP.V2_0.NRT.nc",
+      "bytes": 147995278,
+      "sha256": "db38c89499f33603de850e1b321e1adbdbcd0609ebc7c532050c8d16d183e98e"
+    }
+  ],
+  "experiments": [
+    {
+      "name": "wavelength-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.experiment",
+        "--position",
+        "wavelength",
+        "--seed",
+        "0"
+      ]
+    },
+    {
+      "name": "wavelength-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.experiment",
+        "--position",
+        "wavelength",
+        "--seed",
+        "1"
+      ]
+    },
+    {
+      "name": "wavelength-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.experiment",
+        "--position",
+        "wavelength",
+        "--seed",
+        "2"
+      ]
+    },
+    {
+      "name": "index-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.experiment",
+        "--position",
+        "index",
+        "--seed",
+        "0"
+      ]
+    },
+    {
+      "name": "index-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.experiment",
+        "--position",
+        "index",
+        "--seed",
+        "1"
+      ]
+    },
+    {
+      "name": "index-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.experiment",
+        "--position",
+        "index",
+        "--seed",
+        "2"
+      ]
+    }
+  ]
+}

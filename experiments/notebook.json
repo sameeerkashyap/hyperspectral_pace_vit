@@ -1,0 +1,22 @@
+{
+  "datasets": [
+    {
+      "file": "PACE_OCI.20240730T181157.L2.OC_AOP.V2_0.NRT.nc",
+      "url": "https://github.com/opengeos/datasets/releases/download/hypercoast/PACE_OCI.20240730T181157.L2.OC_AOP.V2_0.NRT.nc",
+      "bytes": 147995278,
+      "sha256": "db38c89499f33603de850e1b321e1adbdbcd0609ebc7c532050c8d16d183e98e"
+    }
+  ],
+  "experiments": [
+    {
+      "name": "notebook-seed-0",
+      "notebook": "experiments/train.ipynb",
+      "parameters": {
+        "position": "wavelength",
+        "seed": 0,
+        "steps": 500,
+        "chips": 64
+      }
+    }
+  ]
+}

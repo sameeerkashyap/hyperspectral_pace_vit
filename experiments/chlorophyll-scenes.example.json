@@ -1,0 +1,40 @@
+{
+  "scenes": [
+    {
+      "id": "replace-train-scene",
+      "split": "train",
+      "aop": "train-aop.nc",
+      "bgc": "train-bgc.nc",
+      "bbox": [
+        0,
+        0,
+        10,
+        10
+      ]
+    },
+    {
+      "id": "replace-validation-scene",
+      "split": "validation",
+      "aop": "validation-aop.nc",
+      "bgc": "validation-bgc.nc",
+      "bbox": [
+        20,
+        0,
+        30,
+        10
+      ]
+    },
+    {
+      "id": "replace-test-scene",
+      "split": "test",
+      "aop": "test-aop.nc",
+      "bgc": "test-bgc.nc",
+      "bbox": [
+        40,
+        0,
+        50,
+        10
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "file": "PACE_OCI.20240615T182549.L2.OC_BGC.V1_0_0.NRT.nc",
+    "url": "https://github.com/opengeos/datasets/releases/download/hypercoast/PACE_OCI.20240615T182549.L2.OC_BGC.V1_0_0.NRT.nc",
+    "bytes": 9815820,
+    "sha256": "319140ad79f27ad1a8f53abe2faa46f135a1daf99117a18b5243734bc9386472"
+  },
+  {
+    "file": "PACE_OCI.20240730T181157.L2.OC_AOP.V2_0.NRT.nc",
+    "url": "https://github.com/opengeos/datasets/releases/download/hypercoast/PACE_OCI.20240730T181157.L2.OC_AOP.V2_0.NRT.nc",
+    "bytes": 147995278,
+    "sha256": "db38c89499f33603de850e1b321e1adbdbcd0609ebc7c532050c8d16d183e98e"
+  }
+]

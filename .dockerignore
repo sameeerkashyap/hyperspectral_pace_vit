@@ -1,0 +1,10 @@
+**
+!pyproject.toml
+!src/
+!src/**
+!experiments/
+!experiments/**
+!container/
+!container/**
+**/__pycache__/
+**/*.pyc

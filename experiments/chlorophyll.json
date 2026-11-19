@@ -1,0 +1,215 @@
+{
+  "datasets": [],
+  "experiments": [
+    {
+      "name": "mlp-d576-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "mlp",
+        "--seed",
+        "0",
+        "--embed-dim",
+        "576"
+      ]
+    },
+    {
+      "name": "mlp-d576-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "mlp",
+        "--seed",
+        "1",
+        "--embed-dim",
+        "576"
+      ]
+    },
+    {
+      "name": "mlp-d576-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "mlp",
+        "--seed",
+        "2",
+        "--embed-dim",
+        "576"
+      ]
+    },
+    {
+      "name": "spectral-d96-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spectral",
+        "--seed",
+        "0",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "spectral-d96-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spectral",
+        "--seed",
+        "1",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "spectral-d96-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spectral",
+        "--seed",
+        "2",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "spatial-d96-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial",
+        "--seed",
+        "0",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "spatial-d96-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial",
+        "--seed",
+        "1",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "spatial-d96-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial",
+        "--seed",
+        "2",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "mixed-d96-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "mixed",
+        "--seed",
+        "0",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "mixed-d96-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "mixed",
+        "--seed",
+        "1",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "mixed-d96-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "mixed",
+        "--seed",
+        "2",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "spatial-scratch-d96-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial-scratch",
+        "--seed",
+        "0",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "spatial-scratch-d96-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial-scratch",
+        "--seed",
+        "1",
+        "--embed-dim",
+        "96"
+      ]
+    },
+    {
+      "name": "spatial-scratch-d96-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial-scratch",
+        "--seed",
+        "2",
+        "--embed-dim",
+        "96"
+      ]
+    }
+  ]
+}

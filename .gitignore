@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.tokensave/
+data/raw/
+*.egg-info/
+.DS_Store
+outputs/
+build/
+dist/
+.env
+.env.*
+!.env.example

@@ -1,0 +1,89 @@
+{
+  "datasets": [],
+  "experiments": [
+    {
+      "name": "spatial-d192-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial",
+        "--seed",
+        "0",
+        "--embed-dim",
+        "192"
+      ]
+    },
+    {
+      "name": "spatial-d192-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial",
+        "--seed",
+        "1",
+        "--embed-dim",
+        "192"
+      ]
+    },
+    {
+      "name": "spatial-d192-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial",
+        "--seed",
+        "2",
+        "--embed-dim",
+        "192"
+      ]
+    },
+    {
+      "name": "spatial-scratch-d192-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial-scratch",
+        "--seed",
+        "0",
+        "--embed-dim",
+        "192"
+      ]
+    },
+    {
+      "name": "spatial-scratch-d192-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial-scratch",
+        "--seed",
+        "1",
+        "--embed-dim",
+        "192"
+      ]
+    },
+    {
+      "name": "spatial-scratch-d192-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.benchmark",
+        "--arm",
+        "spatial-scratch",
+        "--seed",
+        "2",
+        "--embed-dim",
+        "192"
+      ]
+    }
+  ]
+}
