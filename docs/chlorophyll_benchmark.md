@@ -157,7 +157,7 @@ small pilot settings, not optimized training. The wavelength-token arms can
 still be expensive at large chip sizes. The optional
 [wide plan](../experiments/chlorophyll-wide.json) repeats the spatial pair with
 192 features across three seeds. Set Nautilus `completions: 6` for that plan.
-Change image tag, namespace and output root before submitting another run.
+Use namespace `sea-meets-the-stars`. Change the image tag and output root before submitting another run.
 
 Only training inputs fit the scalar reflectance normalization. Only training
 scenes are used for pretraining and supervised optimization. Validation

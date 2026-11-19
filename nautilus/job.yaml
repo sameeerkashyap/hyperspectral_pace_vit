@@ -1,6 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
+  namespace: sea-meets-the-stars
   name: pace-spectral-validation
 spec:
   completionMode: Indexed

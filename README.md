@@ -190,13 +190,14 @@ uv run python -m src.benchmark --scenes /path/to/scenes.json \
 
 See the [benchmark guide](docs/chlorophyll_benchmark.md) for all 15 runs,
 checkpoint selection, metrics, and the wider-model comparison. Docker and
-Nautilus files are templates; set the image, namespace, storage, and inputs
-before use. Follow the [runtime guide](docs/running_experiments.md).
+Nautilus experiments use context `nautilus` and namespace `sea-meets-the-stars`.
+Set the image, storage, and inputs before use. Follow the [runtime guide](docs/running_experiments.md).
 
 ## Documentation
 
 | Guide | Contents |
 | --- | --- |
+| [PACE fields and NRP data access](docs/data_access.md) | Used fields, preprocessing, AWS CLI, and S3 staging |
 | [Architecture](docs/architecture.md) | Model interfaces, tensor shapes, diagrams, and examples |
 | [Experiment design](docs/experiment_design.md) | Reconstruction controls, pilot results, and evidence limits |
 | [Chlorophyll benchmark](docs/chlorophyll_benchmark.md) | Matched scenes, five variants, training, and evaluation |

@@ -14,6 +14,9 @@ not running. A slim base does not imply a small runtime disk footprint.
 
 ## Local sample
 
+Use local commands below for inspection or quick checks. Run research experiments
+on Nautilus in `sea-meets-the-stars`.
+
 ```sh
 uv sync
 uv run python -m src.runner --plan experiments/sample.json
@@ -73,18 +76,19 @@ docker run --rm -e TORCH_INDEX_URL=https://download.pytorch.org/whl/cpu \
 ## Nautilus indexed Job
 
 Files: [Job](../nautilus/job.yaml), [results PVC](../nautilus/pvc.yaml).
-Select your Nautilus context and namespace. The example PVC uses `rook-cephfs`
+Use context `nautilus` and namespace `sea-meets-the-stars` for this repository.
+The manifests set that namespace explicitly. The example PVC uses `rook-cephfs`
 and requires ReadWriteMany access so multiple workers can write separate result
 directories. Confirm that storage class and your GPU/resource quota first.
-Replace the Job image with the pushed tag. No namespace or registry was guessed.
+Replace the Job image with the pushed tag. Registry and image tags remain placeholders.
+Do not add elapsed-time limits or automatic timed deletion to Nautilus workloads.
 
 ```sh
-kubectl config current-context
-kubectl get storageclass
-kubectl apply -n YOUR_NAMESPACE -f nautilus/pvc.yaml
-kubectl apply -n YOUR_NAMESPACE -f nautilus/job.yaml
-kubectl get pods -n YOUR_NAMESPACE -l job-name=pace-spectral-validation
-kubectl logs -n YOUR_NAMESPACE -f JOB_POD_NAME
+kubectl --context nautilus get storageclass
+kubectl --context nautilus apply -n sea-meets-the-stars -f nautilus/pvc.yaml
+kubectl --context nautilus apply -n sea-meets-the-stars -f nautilus/job.yaml
+kubectl --context nautilus get pods -n sea-meets-the-stars -l job-name=pace-spectral-validation
+kubectl --context nautilus logs -n sea-meets-the-stars -f JOB_POD_NAME
 ```
 
 Six completions select six JSON-plan entries using `JOB_COMPLETION_INDEX`.
@@ -101,16 +105,16 @@ copying the results.
 
 ### Retrieve completed results
 
-Create a short-lived, read-only PVC reader after the Job finishes:
+Create a read-only PVC reader after the Job finishes:
 
 ```sh
-kubectl apply -n YOUR_NAMESPACE -f nautilus/results.yaml
-kubectl wait -n YOUR_NAMESPACE --for=condition=Ready pod/pace-results --timeout=120s
-kubectl cp -n YOUR_NAMESPACE pace-results:/results/sample-v1 ./outputs/sample-v1
-kubectl delete pod -n YOUR_NAMESPACE pace-results
+kubectl --context nautilus apply -n sea-meets-the-stars -f nautilus/results.yaml
+kubectl --context nautilus wait -n sea-meets-the-stars --for=condition=Ready pod/pace-results --timeout=120s
+kubectl --context nautilus cp -n sea-meets-the-stars pace-results:/results/sample-v1 ./outputs/sample-v1
+kubectl --context nautilus delete pod -n sea-meets-the-stars pace-results
 ```
 
-The reader exits after 30 minutes if left running. Each experiment directory has
+Delete the reader after copying results; it has no timed exit. Each experiment directory has
 `metrics.json`, `best.pt`, `console.log`, `packages.json`, and `run.json`.
 The metrics include both wavelength grids, split blocks and coordinates,
 training normalization, seed, source version, and noise-test results. The
@@ -174,9 +178,10 @@ secret is built into this image.
 
 ## Verification limits
 
-The local real-data pilot and runner tests were executed. The environment's
-current Kubernetes context is `docker-desktop`, and its Docker daemon is not
-running. No image was built or pushed and no Nautilus resources were submitted.
+The local real-data pilot and runner tests were executed. Nautilus access to
+`sea-meets-the-stars` and permission to create Jobs were verified on 2026-11-19.
+No image has been built or pushed for this project, and no Nautilus experiments
+have been submitted. Always select `--context nautilus` explicitly.
 Storage class, quota, GPU driver support, registry access and final image size
 must be checked in the target environment.
 
