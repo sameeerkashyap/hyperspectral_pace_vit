@@ -20,6 +20,12 @@ Use `wavelength_3d`, not the sensor-wide `wavelength` array, for the `Rrs` axis.
 
 ## How the data is used
 
+The current [discovery experiment](discovery_experiment.md) learns only from
+AOP reflectance. It uses native-resolution chips, training-only normalization,
+masked reconstruction, and frozen-feature analysis. Aerosol and optical summary
+fields are used for audit outputs, not model inputs. BGC is optional for later
+interpretation. The steps below describe the earlier supervised comparison.
+
 1. Read NetCDF values, decode their scale and offset, and reject fill or invalid values.
 2. Apply quality flags. Match AOP and BGC acquisition metadata and pixel locations.
 3. Select visible wavelengths and small spatial chips. The reconstruction pilot
@@ -67,6 +73,16 @@ avoids an extra plugin. No Python S3 client is needed.
 
 ## Stage data for training
 
+The current [multi-scene campaign](discovery_multiscene_run.md) downloads NASA
+AOP v3.2 data directly on Nautilus with curl and the existing private Earthdata
+Secret. It records source URLs and file hashes, then screens clear chips before
+writing the training manifest. Raw files stay on the project PVC; this workflow
+does not require an NRP S3 copy. NRP transfers below use AWS CLI.
+
+The project bucket is `s3://pace-vit` on the NRP west endpoint. Creation and
+owner access were verified. The current NRP profile cannot access `s3://llc`;
+the examples below need a source bucket and prefix you can read.
+
 List the bucket before choosing a prefix. Bucket access alone does not establish
 that it contains PACE data. Download only the chosen files or prefix:
 
@@ -91,3 +107,37 @@ install AWS CLI; S3 staging needs an AWS CLI environment before training.
 All project experiments must use context `nautilus` and namespace
 `sea-meets-the-stars`. Follow the [runtime guide](running_experiments.md).
 Do not add elapsed-time limits or automatic timed deletion to running workloads.
+
+## Public downloads and authenticated uploads
+
+The proposed [bucket policy](../data/pace-vit-public-read-policy.json) allows
+anyone to download objects under `s3://pace-vit/public/` if they know the object
+URL. It does not grant anonymous bucket listing, uploads, or deletion. It does
+not grant access outside `public/`. Existing ACL grants still apply; the bucket
+currently grants full control only to its owner.
+
+Use this prefix only for files intended for public release. Keep private inputs,
+credentials, and unpublished outputs outside it. An upload to `public/` becomes
+public as soon as the policy is active, including an overwrite of an existing key.
+Authenticated uploads remain available to the bucket owner. Other writers need
+an explicit grant for their NRP identity; having any valid S3 key is insufficient.
+
+The policy was applied and read back successfully on 2026-11-19. To reapply it
+from the repository root:
+
+```sh
+aws --profile nrp --endpoint-url https://s3-west.nrp-nautilus.io \
+  s3api put-bucket-policy --bucket pace-vit \
+  --policy file://data/pace-vit-public-read-policy.json
+```
+
+`put-bucket-policy` replaces the existing policy. Check it first if the bucket
+has changed since setup. Do not combine this policy with public bucket or object
+ACLs unless their broader access is intended. NRP documents bucket policies and
+public download access in its [Ceph S3 guide](https://nrp.ai/documentation/userdocs/storage/ceph-s3/).
+
+A released object at `public/example.nc` can be downloaded from:
+
+```text
+https://s3-west.nrp-nautilus.io/pace-vit/public/example.nc
+```

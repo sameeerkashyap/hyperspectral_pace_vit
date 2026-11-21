@@ -1,0 +1,102 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  namespace: sea-meets-the-stars
+  name: pace-optical-discovery-v3
+spec:
+  completionMode: Indexed
+  completions: 10
+  parallelism: 2
+  backoffLimit: 20
+  podFailurePolicy:
+    rules:
+      - action: Ignore
+        onPodConditions:
+          - type: DisruptionTarget
+      - action: FailJob
+        onExitCodes:
+          containerName: experiment
+          operator: In
+          values: [1, 2]
+  template:
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: NotIn
+                    values: [k8s-chase-ci-01.calit2.optiputer.net, k8s-chase-ci-03.calit2.optiputer.net]
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              preference:
+                matchExpressions:
+                  - key: nvidia.com/gpu.product
+                    operator: In
+                    values: [NVIDIA-L40S, NVIDIA-L40, NVIDIA-GeForce-RTX-4090, NVIDIA-GeForce-RTX-3090, NVIDIA-A10]
+      containers:
+        - name: experiment
+          image: python:3.11-slim-bookworm
+          command:
+            - /bin/sh
+            - -ec
+            - |
+              python -c 'import hashlib; from pathlib import Path; p=Path("/results/code/discovery-v5.tar.gz"); assert hashlib.file_digest(p.open("rb"),"sha256").hexdigest()=="d364ab0a1a406479d4430821a48f724b3118fc5fbfa49f99a58fbe6548cb6095", "Source checksum mismatch"'
+              mkdir -p /source
+              tar -xzf /results/code/discovery-v5.tar.gz -C /source
+              exec python /source/discovery_worker.py
+          env:
+            - name: PROJECT_EXTRAS
+              value: "[discovery]"
+            - name: SCENE_MANIFEST
+              value: /results/discovery-prepared-v1/scenes.json
+            - name: JOB_COMPLETION_INDEX
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.annotations['batch.kubernetes.io/job-completion-index']
+            - name: POD_UID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.uid
+            - name: DATA_DIR
+              value: /results/data/discovery-v2
+            - name: OUTPUT_ROOT
+              value: /results/discovery-v1
+            - name: OMP_NUM_THREADS
+              value: "4"
+            - name: UV_CACHE_DIR
+              value: /runtime/uv-cache
+          resources:
+            requests:
+              cpu: "4"
+              memory: 16Gi
+              ephemeral-storage: 12Gi
+              nvidia.com/gpu: "1"
+            limits:
+              cpu: "4"
+              memory: 16Gi
+              ephemeral-storage: 24Gi
+              nvidia.com/gpu: "1"
+          volumeMounts:
+            - name: results
+              mountPath: /results
+            - name: runtime
+              mountPath: /runtime
+            - name: shared-memory
+              mountPath: /dev/shm
+      volumes:
+        - name: results
+          persistentVolumeClaim:
+            claimName: pace-experiment-results
+        - name: runtime
+          emptyDir:
+            sizeLimit: 24Gi
+        - name: shared-memory
+          emptyDir:
+            medium: Memory
+            sizeLimit: 1Gi

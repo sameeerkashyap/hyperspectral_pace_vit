@@ -21,13 +21,14 @@ def read_valid(variable, selection=...):
     return np.where(valid, value, np.nan)
 
 
-def quality_mask(variable, selection=...):
+def quality_mask(variable, selection=..., exclude_flags=EXCLUDE_FLAGS):
     meanings = variable.attrs["flag_meanings"].split()
     masks = np.asarray(variable.attrs["flag_masks"]).astype(np.uint32)
-    missing = set(EXCLUDE_FLAGS) - set(meanings)
+    missing = set(exclude_flags) - set(meanings)
     if missing:
         raise ValueError(f"Missing quality flag definitions: {sorted(missing)}")
-    excluded = np.bitwise_or.reduce([m for n, m in zip(meanings, masks) if n in EXCLUDE_FLAGS])
+    excluded = np.bitwise_or.reduce([m for n, m in zip(meanings, masks) if n in exclude_flags],
+                                    initial=np.uint32(0))
     return (np.asarray(variable[selection]).astype(np.uint32) & excluded) == 0
 
 

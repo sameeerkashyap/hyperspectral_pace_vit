@@ -1,0 +1,90 @@
+{
+  "status": "complete",
+  "submitted_date": "2026-11-20",
+  "context": "nautilus",
+  "namespace": "sea-meets-the-stars",
+  "job": "pace-discovery-pilot-v1-retry1",
+  "pod": "pace-discovery-pilot-v1-retry1-rthlz",
+  "gpu": "NVIDIA GeForce GTX 1080 Ti",
+  "source_sha256": "ac569aa4430feb0b6e1a6b086b94f15853ae1ea59a06b6de4081e58ca3321ac6",
+  "input_sha256": "b8013c3b16d73f1cbf8121745dc30c2360d5c095124928e520df6d0470c10d1e",
+  "pvc": "pace-experiment-results",
+  "input_path": "/results/data/PACE_OCI.20240305T000858.L2.OC_AOP.V3_2.nc",
+  "output_root": "/results/discovery-pilot-v1",
+  "chips": {
+    "train": 72,
+    "validation": 116,
+    "test": 47
+  },
+  "bands": 136,
+  "methods": [
+    "pca",
+    "spectral-ae",
+    "mae"
+  ],
+  "neural_steps": 1000,
+  "seed": 0,
+  "scope": "Single-scene spatial pilot. No transfer across dates or regions established.",
+  "initial_submission": "pace-discovery-pilot-v1 failed before container startup: node reported a lost GPU.",
+  "checks": {
+    "unit_tests_passed": 18,
+    "unit_tests_skipped": 1,
+    "skip_reason": "Sandbox blocks Jupyter kernel ports",
+    "input_checksum_on_pvc": "matched"
+  },
+  "start_utc": "2026-11-20T20:20:52Z",
+  "completion_utc": "2026-11-20T20:24:15Z",
+  "results_document": "docs/discovery_pilot_results.md",
+  "comparison": {
+    "runs": [
+      {
+        "run": "mae-mixed-seed-0",
+        "path": "/results/discovery-pilot-v1/mae-seed-0/discovery",
+        "test_scene_mean_rmse_sr_inv": 0.00031296639907507965,
+        "spectral_gap_rmse_sr_inv": 0.00033133520499805904,
+        "spatial_hole_rmse_sr_inv": 0.0002945975931521003,
+        "noise_cluster_agreement_test": 0.801529255319149,
+        "noise_neighbor_overlap_at_5": 0.71875
+      },
+      {
+        "run": "pca-mixed-seed-0",
+        "path": "/results/discovery-pilot-v1/pca-seed-0/discovery",
+        "test_scene_mean_rmse_sr_inv": 0.0003202192469012156,
+        "spectral_gap_rmse_sr_inv": 0.00021971221365691275,
+        "spatial_hole_rmse_sr_inv": 0.0004207262801455185,
+        "noise_cluster_agreement_test": 0.8414228723404256,
+        "noise_neighbor_overlap_at_5": 0.8
+      },
+      {
+        "run": "spectral-ae-mixed-seed-0",
+        "path": "/results/discovery-pilot-v1/spectral-ae-seed-0/discovery",
+        "test_scene_mean_rmse_sr_inv": 0.00032579233142890286,
+        "spectral_gap_rmse_sr_inv": 0.00025467876484170526,
+        "spatial_hole_rmse_sr_inv": 0.0003969058980161004,
+        "noise_cluster_agreement_test": 0.8783244680851063,
+        "noise_neighbor_overlap_at_5": 0.5687500000000001
+      }
+    ],
+    "agreements": [
+      {
+        "left": "mae-mixed-seed-0",
+        "right": "pca-mixed-seed-0",
+        "adjusted_rand_test": 0.23335256768409063,
+        "neighbor_overlap_at_5": 0.075
+      },
+      {
+        "left": "mae-mixed-seed-0",
+        "right": "spectral-ae-mixed-seed-0",
+        "adjusted_rand_test": 0.31883426148032834,
+        "neighbor_overlap_at_5": 0.1625
+      },
+      {
+        "left": "pca-mixed-seed-0",
+        "right": "spectral-ae-mixed-seed-0",
+        "adjusted_rand_test": 0.38749277576759633,
+        "neighbor_overlap_at_5": 0.38125
+      }
+    ],
+    "scope": "Descriptive comparison; seed agreement and reconstruction do not establish biological identity."
+  }
+}

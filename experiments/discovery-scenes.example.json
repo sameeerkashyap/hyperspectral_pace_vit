@@ -1,0 +1,37 @@
+{
+  "scenes": [
+    {
+      "id": "train-replace-me",
+      "split": "train",
+      "aop": "train-aop-v3_2.nc",
+      "bbox": [
+        0,
+        0,
+        10,
+        10
+      ]
+    },
+    {
+      "id": "validation-replace-me",
+      "split": "validation",
+      "aop": "validation-aop-v3_2.nc",
+      "bbox": [
+        20,
+        0,
+        30,
+        10
+      ]
+    },
+    {
+      "id": "test-replace-me",
+      "split": "test",
+      "aop": "test-aop-v3_2.nc",
+      "bbox": [
+        40,
+        0,
+        50,
+        10
+      ]
+    }
+  ]
+}

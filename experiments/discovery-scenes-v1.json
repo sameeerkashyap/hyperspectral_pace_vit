@@ -1,0 +1,515 @@
+{
+  "scope": "multi-scene",
+  "scenes": [
+    {
+      "id": "california-2024-06-01",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "aop": "PACE_OCI.20240604T201504.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240604T201504.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194676730-OB_CLOUD",
+      "sha256": "711f2b364939f843be6553d8c59aca372e3b91b0ad8173cc2a18a0befd02632f",
+      "bytes": 98040589,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.05194291413199083
+    },
+    {
+      "id": "california-2024-06-05",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "aop": "PACE_OCI.20240605T204951.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240605T204951.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194798213-OB_CLOUD",
+      "sha256": "c7fd24e1f608373924f803229883474aaad37f977a175e7d9099216717c734e3",
+      "bytes": 264393987,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.11222507263967045
+    },
+    {
+      "id": "california-2024-06-09",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "aop": "PACE_OCI.20240610T202702.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240610T202702.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194718147-OB_CLOUD",
+      "sha256": "6bd1517ca3c59fb6c1ee9c3d9c8a62b4460e1e2b5e7370315ed9d067c9494d35",
+      "bytes": 112624912,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.029654915590863952
+    },
+    {
+      "id": "california-2024-06-13",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "aop": "PACE_OCI.20240616T203852.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240616T203852.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194355092-OB_CLOUD",
+      "sha256": "34dd377dcc8f12bc770873c685bf3db159f38648d647deeeeb86bafcd4ba0680",
+      "bytes": 306719727,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.059020651734157194
+    },
+    {
+      "id": "california-2024-06-17",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "aop": "PACE_OCI.20240618T200959.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T200959.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194719173-OB_CLOUD",
+      "sha256": "eb61cd5cc58282c5dc563a7d55d16a2a598a322179675324a517f2bd3ecc34f0",
+      "bytes": 113773409,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.036054038736839
+    },
+    {
+      "id": "california-2024-06-21",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "aop": "PACE_OCI.20240624T202137.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240624T202137.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194719306-OB_CLOUD",
+      "sha256": "a8de6d2e17a7aa8e8a39ca296f61afc4fe8169483f1ff012236f1823f9f09dcd",
+      "bytes": 102908638,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.04490792364507546
+    },
+    {
+      "id": "north-pacific-2024-06-01",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "aop": "PACE_OCI.20240601T232039.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240601T232039.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194756957-OB_CLOUD",
+      "sha256": "c48699a72c992afa4cd7ce1c3bed3da985d05ddacb051113488d359cb3b1209d",
+      "bytes": 445140439,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.07615343851088024
+    },
+    {
+      "id": "north-pacific-2024-06-05",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "aop": "PACE_OCI.20240606T225757.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240606T225757.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194841518-OB_CLOUD",
+      "sha256": "998c5b91f11aa07ff20498040c87664c63b0c9b63d353986d3b6d1141fde1d20",
+      "bytes": 282904869,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.12766255966378515
+    },
+    {
+      "id": "north-pacific-2024-06-09",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "aop": "PACE_OCI.20240609T230355.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240609T230355.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194892483-OB_CLOUD",
+      "sha256": "950f7912b69333628523931de9d13a83a79c60a8a96f87cba58ca112d02ebdb8",
+      "bytes": 383433198,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.1299400878074272
+    },
+    {
+      "id": "north-pacific-2024-06-13",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "aop": "PACE_OCI.20240615T231546.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240615T231546.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194799076-OB_CLOUD",
+      "sha256": "fa33dfc2bcc55f5d03b5f850b1e6b298ae9d6c8bf484f5aa09353d7b8ed06a08",
+      "bytes": 433176770,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.05797415458670523
+    },
+    {
+      "id": "north-pacific-2024-06-17",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "aop": "PACE_OCI.20240619T221801.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240619T221801.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194719690-OB_CLOUD",
+      "sha256": "b74936822e39cd27d6a3b30f107a107e8625a07f8086ed55abbe02f88b12e9f0",
+      "bytes": 324895700,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.08458245981830888
+    },
+    {
+      "id": "north-pacific-2024-06-21",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "aop": "PACE_OCI.20240623T225832.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240623T225832.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194757295-OB_CLOUD",
+      "sha256": "15042e98715a1b22a52c6c52153e2bb6d6c1844e5cb82669324b21ad603de98d",
+      "bytes": 399634338,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.1088119276177866
+    },
+    {
+      "id": "north-atlantic-2024-06-01",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "aop": "PACE_OCI.20240601T151403.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240601T151403.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194676892-OB_CLOUD",
+      "sha256": "051c32221adbce849b4c6e42d9527503053d5a902bfdb4cb835b018d2bfd371a",
+      "bytes": 412638580,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.24383574239582184
+    },
+    {
+      "id": "north-atlantic-2024-06-05",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "aop": "PACE_OCI.20240607T152607.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240607T152607.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4195113469-OB_CLOUD",
+      "sha256": "58248af10aca6ee45d576b00898abcd77fce7544928f15793f82430258a680c7",
+      "bytes": 308827651,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.1648560524930906
+    },
+    {
+      "id": "north-atlantic-2024-06-09",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "aop": "PACE_OCI.20240612T150316.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240612T150316.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194538643-OB_CLOUD",
+      "sha256": "a052e6871498786c1a44a917f46250c0f092e475bcedd64d4c689bf3a2e0acd9",
+      "bytes": 412119791,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.21003262417611535
+    },
+    {
+      "id": "north-atlantic-2024-06-13",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "aop": "PACE_OCI.20240615T150911.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240615T150911.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194719622-OB_CLOUD",
+      "sha256": "defa52748880e6efefab7205aa89efd8fa1e04e4d5f30742d390997027a624f4",
+      "bytes": 437433272,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.27891656552282174
+    },
+    {
+      "id": "north-atlantic-2024-06-17",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "aop": "PACE_OCI.20240618T151502.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T151502.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194799316-OB_CLOUD",
+      "sha256": "b181fdb8970dc2d58d4d004848250b885a90b01a67ed891799b04989c00f8181",
+      "bytes": 316863349,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.13867464783552172
+    },
+    {
+      "id": "north-atlantic-2024-06-21",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "aop": "PACE_OCI.20240624T152640.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240624T152640.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194538781-OB_CLOUD",
+      "sha256": "63fd664ea4173326d1ede2c834b9883a3fcf4a35e822b5b2f7642554a8bfb3ac",
+      "bytes": 399948588,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.20754257236382362
+    },
+    {
+      "id": "east-atlantic-2024-07-01",
+      "split": "validation",
+      "bbox": [
+        -25,
+        25,
+        -10,
+        45
+      ],
+      "aop": "PACE_OCI.20240707T130740.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240707T130740.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194634996-OB_CLOUD",
+      "sha256": "e87a7a2d8cd909c864fdbfb8fb606031077f59acd9efa2e8b344b3e595a9d6c8",
+      "bytes": 249445212,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.07815311834130077
+    },
+    {
+      "id": "east-atlantic-2024-07-09",
+      "split": "validation",
+      "bbox": [
+        -25,
+        25,
+        -10,
+        45
+      ],
+      "aop": "PACE_OCI.20240715T124945.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240715T124945.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194634985-OB_CLOUD",
+      "sha256": "e0bc1d6b9cac726db22adc877713ee011abb2fa6ebf2143b70b4077377455996",
+      "bytes": 240469927,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.07759250064364265
+    },
+    {
+      "id": "east-atlantic-2024-07-17",
+      "split": "validation",
+      "bbox": [
+        -25,
+        25,
+        -10,
+        45
+      ],
+      "aop": "PACE_OCI.20240721T130048.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240721T130048.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194587942-OB_CLOUD",
+      "sha256": "afe1fd698103138c9d8baba1dec267338a4dbd5628c3770ab3490c0ed88dc1c0",
+      "bytes": 161906554,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.02547142210494938
+    },
+    {
+      "id": "south-indian-2024-07-01",
+      "split": "validation",
+      "bbox": [
+        45,
+        -35,
+        75,
+        -10
+      ],
+      "aop": "PACE_OCI.20240701T092438.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240701T092438.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4195093168-OB_CLOUD",
+      "sha256": "e81af463ed125d47f41744bae9492a27939e471ce5996f656ce2f830bbadad31",
+      "bytes": 488862320,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.28692944492899225
+    },
+    {
+      "id": "south-indian-2024-07-09",
+      "split": "validation",
+      "bbox": [
+        45,
+        -35,
+        75,
+        -10
+      ],
+      "aop": "PACE_OCI.20240710T094135.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240710T094135.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194799390-OB_CLOUD",
+      "sha256": "326c42aa9ed9d0283769edf839451011f9be06c02717113a817f4a794c5ef979",
+      "bytes": 506786404,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.3651430725661113
+    },
+    {
+      "id": "south-indian-2024-07-17",
+      "split": "validation",
+      "bbox": [
+        45,
+        -35,
+        75,
+        -10
+      ],
+      "aop": "PACE_OCI.20240720T085435.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240720T085435.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194538853-OB_CLOUD",
+      "sha256": "d67e6555e02d506d3338a165d04049307c4647767c6df08a8adc9b1177d1aab8",
+      "bytes": 565166859,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.30754716981132074
+    },
+    {
+      "id": "benguela-2024-08-01",
+      "split": "test",
+      "bbox": [
+        0,
+        -35,
+        20,
+        -10
+      ],
+      "aop": "PACE_OCI.20240803T120338.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240803T120338.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4193922910-OB_CLOUD",
+      "sha256": "15b54b271e7ccb7cacdef95c85d7d1063aa86fb377b094ee4c99fc4a4d384e5c",
+      "bytes": 117260518,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.04195279522763321
+    },
+    {
+      "id": "benguela-2024-08-09",
+      "split": "test",
+      "bbox": [
+        0,
+        -35,
+        20,
+        -10
+      ],
+      "aop": "PACE_OCI.20240809T121417.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240809T121417.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194720213-OB_CLOUD",
+      "sha256": "c3f9bfe6b4e2d8a279fcce8b6f0dcd1567a0937e92906ce1b7a8b755e248b951",
+      "bytes": 276148800,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.207724171539961
+    },
+    {
+      "id": "benguela-2024-08-17",
+      "split": "test",
+      "bbox": [
+        0,
+        -35,
+        20,
+        -10
+      ],
+      "aop": "PACE_OCI.20240818T122953.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240818T122953.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194636926-OB_CLOUD",
+      "sha256": "290be374babcf4f659401ea894e47ff2f86486c6dfa9aca461be360598f44220",
+      "bytes": 367717780,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.25011861414542647
+    },
+    {
+      "id": "south-pacific-2024-08-01",
+      "split": "test",
+      "bbox": [
+        -115,
+        -35,
+        -85,
+        -10
+      ],
+      "aop": "PACE_OCI.20240802T194036.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240802T194036.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4195143945-OB_CLOUD",
+      "sha256": "b0bb885629478c67fc747aac6edec2b996cf76cecedc3f2b28edc2f65843adc2",
+      "bytes": 253701865,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.11822887932619809
+    },
+    {
+      "id": "south-pacific-2024-08-09",
+      "split": "test",
+      "bbox": [
+        -115,
+        -35,
+        -85,
+        -10
+      ],
+      "aop": "PACE_OCI.20240814T200142.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240814T200142.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194481657-OB_CLOUD",
+      "sha256": "88062787dc4ed6e3c8297bbce1435600efd5813ae46390d31e5e5b12f0fd1345",
+      "bytes": 414053188,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.16010289087498622
+    },
+    {
+      "id": "south-pacific-2024-08-17",
+      "split": "test",
+      "bbox": [
+        -115,
+        -35,
+        -85,
+        -10
+      ],
+      "aop": "PACE_OCI.20240817T201153.L2.OC_AOP.V3_2.nc",
+      "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240817T201153.L2.OC_AOP.V3_2.nc",
+      "cmr_id": "G4194720266-OB_CLOUD",
+      "sha256": "f84c33a08ff2c4fa18e28990ad36997c462c433cb0e3b76758aa3322ca464b50",
+      "bytes": 576643026,
+      "confirmed_clear_chips_at_least": 16,
+      "quality_pixel_fraction_in_full_swath": 0.22562387066621034
+    }
+  ]
+}

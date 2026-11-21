@@ -20,25 +20,53 @@ Spectral and spatial vision transformers for NASA PACE OCI ocean-color data.
 
 ## Overview
 
-PACE ViT studies whether learning the spectrum of light leaving the ocean can
-improve chlorophyll-a prediction. It uses NASA PACE Ocean Color Instrument
-(OCI) Level-2 remote-sensing reflectance (`Rrs`), with quality screening,
-masked reconstruction, and supervised prediction on matched scenes.
+PACE ViT studies what spectral and spatial patterns a model can learn from
+NASA PACE Ocean Color Instrument (OCI) Level-2 reflectance cubes (`Rrs`).
+The current goal is self-supervised discovery of optical water types and
+phytoplankton-related spectral patterns. Training uses the cubes themselves;
+chlorophyll and other biological labels are not training targets.
+
+The [research assessment](docs/self_supervised_research.md) recommends a small
+spectral-spatial masked autoencoder, followed by frozen features, similar-spectrum
+search, and optical group maps. The [discovery experiment](docs/discovery_experiment.md)
+implements this comparison. Its scientific value still needs a real multi-scene
+run and independent observations.
 
 The project provides:
 
-- **Two token designs:** one token per wavelength and spatial patch, or one
-  token per spatial patch containing the full spectrum.
-- **A chlorophyll benchmark:** five model variants across three seeds, including
+- **AOP-only discovery:** grouped spectral-spatial masking, PCA and spectral
+  autoencoder baselines, frozen features, group maps, and cross-scene retrieval.
+- **Token designs:** single wavelengths, narrow wavelength groups, and
+  full-spectrum spatial patches.
+- **An earlier chlorophyll benchmark:** five model variants across three seeds, including
   a spectral MLP and the same spatial transformer with and without pretraining.
 - **Data checks:** packed-value decoding, quality flags, scene alignment, and
   separation of training, validation, and test dates and regions.
 - **Experiment tools:** checksum-verified downloads, saved metrics and weights,
   notebook execution, and Docker/Nautilus templates.
 
-**Current milestone:** run the chlorophyll benchmark on real matched scenes.
-The reconstruction pilot is complete. Biological accuracy and EMIT-to-PACE
-transfer remain unvalidated.
+**Current milestone:** the 30-scene comparison is complete. PCA best recovers
+missing wavelengths, and nearby-pixel interpolation best fills spatial holes.
+The masked model needs better red-band fidelity before scaling. Biological
+identity and EMIT-to-PACE transfer remain unvalidated.
+
+A new [single-scene discovery pilot](docs/discovery_experiment.md#first-run-with-the-existing-download)
+completed on Nautilus on 2026-11-20 using the existing Earthdata v3.2 file.
+It compares PCA, a spectral autoencoder, and the grouped MAE on buffered spatial
+splits. [Results](docs/discovery_pilot_results.md) show that PCA wins on spectral
+gaps and interpolation wins on spatial holes. The MAE needs further evidence
+before scaling. [The launch record](docs/discovery_pilot_run.json) records inputs and setup.
+
+The [multi-scene campaign](docs/discovery_multiscene_run.md) adds 30 AOP v3.2
+granules across seven regions, with separate dates and regions for training,
+validation, and testing. All ten experiments and 45 pairwise comparisons
+completed on Nautilus. See the [measured results](docs/discovery_multiscene_results.md)
+and [machine-readable scores](docs/discovery_multiscene_results.json).
+
+![Observed training spectra grouped by frozen MAE features, seed 0.](docs/assets/discovery/prototype-spectra-seed0.png)
+
+These are observed group-mean spectra. The eight groups were fixed as an
+analysis setting; biological interpretation requires independent observations.
 
 ## Quick start
 
@@ -48,7 +76,7 @@ Run these commands from the repository root:
 ```sh
 git clone https://github.com/sameeerkashyap/hyperspectral_pace_vit.git
 cd hyperspectral_pace_vit
-uv sync
+uv sync --extra discovery
 
 # Download the two public teaching samples.
 uv run python -m data.dataset_download.sample
@@ -79,9 +107,10 @@ uv run python -m src.experiment \
 
 ## Architecture
 
-A masked autoencoder learns to reconstruct hidden input patches. Its encoder
-can then feed a dense prediction head, which produces one chlorophyll estimate
-per pixel.
+A masked autoencoder learns to reconstruct hidden spectral and spatial patches.
+The models expose encoder features. The discovery workflow
+uses these features to find similar spectra and candidate optical water types.
+It does not need a concentration prediction head.
 
 ```mermaid
 flowchart LR
@@ -89,10 +118,9 @@ flowchart LR
     B --> C["Pretrain: hide tokens"]
     C --> D["Transformer encoder"]
     D --> E["Decoder: reconstruct reflectance"]
-    B --> F["Fine-tune encoder: all tokens"]
-    F --> G["Dense head: log10 chlorophyll"]
-    H["Matched BGC targets"] --> I["Valid-pixel loss"]
-    G --> I
+    B --> F["Frozen encoder: all tokens"]
+    F --> G["Similar-spectrum search and optical groups"]
+    G --> H["Maps, prototype spectra, nuisance checks"]
 ```
 
 | Design | Token content | Tokens for a 128 × 128 chip with 172 bands |
@@ -106,8 +134,10 @@ spectral grid and compresses the full spectrum at the input. Cross-sensor
 transfer still needs spectral alignment and separate validation.
 
 Spatial-model inputs have shape `[batch, bands, height, width]`.
-The chlorophyll head returns `[batch, 1, height, width]` in log10 concentration;
-`10 ** prediction` converts it to mg m⁻³.
+The grouped spectral-spatial model uses BHWC inputs. Its default 16 × 16 chip,
+2 × 2 spatial patches, and 8-band groups produce 1088 tokens for the inspected
+136-band visible grid. See the [discovery guide](docs/discovery_experiment.md)
+for the ten-run Nautilus plan and its AOP-only scene manifest.
 See the [architecture guide](docs/architecture.md) for tensor shapes, defaults,
 masking details, and a runnable model example.
 
@@ -165,7 +195,10 @@ Satellite chlorophyll and carbon products are estimates from optical signals.
 Independent field measurements are still needed to test biological accuracy.
 The current predictors produce point estimates without calibrated uncertainty.
 
-## Chlorophyll benchmark
+## Earlier chlorophyll benchmark
+
+This supervised comparison remains available as implemented code. It is separate
+from the current self-supervised discovery goal and is not required to train it.
 
 The [main plan](experiments/chlorophyll.json) compares five variants across
 three paired seeds:
@@ -197,6 +230,8 @@ Set the image, storage, and inputs before use. Follow the [runtime guide](docs/r
 
 | Guide | Contents |
 | --- | --- |
+| [Run self-supervised discovery](docs/discovery_experiment.md) | AOP scene splits, model controls, Nautilus launch, feature maps, and comparison outputs |
+| [Self-supervised discovery research](docs/self_supervised_research.md) | Method comparison, evidence, proposed experiments, and limits on biological claims |
 | [PACE fields and NRP data access](docs/data_access.md) | Used fields, preprocessing, AWS CLI, and S3 staging |
 | [Architecture](docs/architecture.md) | Model interfaces, tensor shapes, diagrams, and examples |
 | [Experiment design](docs/experiment_design.md) | Reconstruction controls, pilot results, and evidence limits |

@@ -1,0 +1,56 @@
+{
+  "datasets": [],
+  "experiments": [
+    {
+      "name": "pca-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "pca",
+        "--steps",
+        "1000",
+        "--seed",
+        "0"
+      ],
+      "parameters": {
+        "scope": "single-scene-spatial-pilot"
+      }
+    },
+    {
+      "name": "spectral-ae-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "spectral-ae",
+        "--steps",
+        "1000",
+        "--seed",
+        "0"
+      ],
+      "parameters": {
+        "scope": "single-scene-spatial-pilot"
+      }
+    },
+    {
+      "name": "mae-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "mae",
+        "--steps",
+        "1000",
+        "--seed",
+        "0"
+      ],
+      "parameters": {
+        "scope": "single-scene-spatial-pilot"
+      }
+    }
+  ]
+}

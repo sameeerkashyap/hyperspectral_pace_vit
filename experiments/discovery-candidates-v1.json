@@ -1,0 +1,1230 @@
+{
+  "collection": "C4124887023-OB_CLOUD",
+  "scope": "multi-scene",
+  "minimum_chips": 16,
+  "chip_size": 16,
+  "slots": [
+    {
+      "id": "california-2024-06-02",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "target_date": "2024-06-02",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-135%2C24%2C-117%2C43&temporal=2024-06-02T00%3A00%3A00Z%2C2024-06-03T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240602T190528.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240602T190528.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4193384828-OB_CLOUD",
+          "acquisition_start": "2024-06-02T19:05:28.000Z",
+          "acquisition_end": "2024-06-02T19:10:27.000Z",
+          "cloud_cover_percent": 63.6,
+          "estimated_mib": 35.7858715057373
+        },
+        {
+          "aop": "PACE_OCI.20240602T222207.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240602T222207.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4193923019-OB_CLOUD",
+          "acquisition_start": "2024-06-02T22:22:07.000Z",
+          "acquisition_end": "2024-06-02T22:27:06.000Z",
+          "cloud_cover_percent": 76.6,
+          "estimated_mib": 206.0990962982178
+        },
+        {
+          "aop": "PACE_OCI.20240602T191028.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240602T191028.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194891893-OB_CLOUD",
+          "acquisition_start": "2024-06-02T19:10:28.000Z",
+          "acquisition_end": "2024-06-02T19:15:27.000Z",
+          "cloud_cover_percent": 80.6,
+          "estimated_mib": 17.39556217193604
+        }
+      ]
+    },
+    {
+      "id": "california-2024-06-06",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "target_date": "2024-06-06",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-135%2C24%2C-117%2C43&temporal=2024-06-06T00%3A00%3A00Z%2C2024-06-07T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240606T194618.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240606T194618.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194718003-OB_CLOUD",
+          "acquisition_start": "2024-06-06T19:46:18.000Z",
+          "acquisition_end": "2024-06-06T19:51:17.000Z",
+          "cloud_cover_percent": 32.2,
+          "estimated_mib": 31.29062080383301
+        },
+        {
+          "aop": "PACE_OCI.20240606T212437.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240606T212437.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194634936-OB_CLOUD",
+          "acquisition_start": "2024-06-06T21:24:37.000Z",
+          "acquisition_end": "2024-06-06T21:29:37.000Z",
+          "cloud_cover_percent": 66.3,
+          "estimated_mib": 244.6852045059204
+        },
+        {
+          "aop": "PACE_OCI.20240606T195118.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240606T195118.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4193805658-OB_CLOUD",
+          "acquisition_start": "2024-06-06T19:51:18.000Z",
+          "acquisition_end": "2024-06-06T19:56:18.000Z",
+          "cloud_cover_percent": 67.2,
+          "estimated_mib": 39.50377655029297
+        }
+      ]
+    },
+    {
+      "id": "california-2024-06-10",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "target_date": "2024-06-10",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-135%2C24%2C-117%2C43&temporal=2024-06-10T00%3A00%3A00Z%2C2024-06-11T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240610T202702.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240610T202702.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194718147-OB_CLOUD",
+          "acquisition_start": "2024-06-10T20:27:02.000Z",
+          "acquisition_end": "2024-06-10T20:32:02.000Z",
+          "cloud_cover_percent": 48.7,
+          "estimated_mib": 107.4074859619141
+        },
+        {
+          "aop": "PACE_OCI.20240610T220521.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240610T220521.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194841554-OB_CLOUD",
+          "acquisition_start": "2024-06-10T22:05:21.000Z",
+          "acquisition_end": "2024-06-10T22:10:20.000Z",
+          "cloud_cover_percent": 54.2,
+          "estimated_mib": 388.7238245010376
+        },
+        {
+          "aop": "PACE_OCI.20240610T220021.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240610T220021.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194799052-OB_CLOUD",
+          "acquisition_start": "2024-06-10T22:00:21.000Z",
+          "acquisition_end": "2024-06-10T22:05:21.000Z",
+          "cloud_cover_percent": 71.5,
+          "estimated_mib": 256.3292808532715
+        }
+      ]
+    },
+    {
+      "id": "california-2024-06-14",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "target_date": "2024-06-14",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-135%2C24%2C-117%2C43&temporal=2024-06-14T00%3A00%3A00Z%2C2024-06-15T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240614T192923.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240614T192923.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194893744-OB_CLOUD",
+          "acquisition_start": "2024-06-14T19:29:23.000Z",
+          "acquisition_end": "2024-06-14T19:34:22.000Z",
+          "cloud_cover_percent": 52.9,
+          "estimated_mib": 31.98022365570068
+        },
+        {
+          "aop": "PACE_OCI.20240614T210742.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240614T210742.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195092925-OB_CLOUD",
+          "acquisition_start": "2024-06-14T21:07:42.000Z",
+          "acquisition_end": "2024-06-14T21:12:41.000Z",
+          "cloud_cover_percent": 60.3,
+          "estimated_mib": 280.6788864135742
+        },
+        {
+          "aop": "PACE_OCI.20240614T210242.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240614T210242.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194894327-OB_CLOUD",
+          "acquisition_start": "2024-06-14T21:02:42.000Z",
+          "acquisition_end": "2024-06-14T21:07:42.000Z",
+          "cloud_cover_percent": 77.4,
+          "estimated_mib": 206.3941879272461
+        }
+      ]
+    },
+    {
+      "id": "california-2024-06-18",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "target_date": "2024-06-18",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-135%2C24%2C-117%2C43&temporal=2024-06-18T00%3A00%3A00Z%2C2024-06-19T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240618T200959.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T200959.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194719173-OB_CLOUD",
+          "acquisition_start": "2024-06-18T20:09:59.000Z",
+          "acquisition_end": "2024-06-18T20:14:58.000Z",
+          "cloud_cover_percent": 37.3,
+          "estimated_mib": 108.5027780532837
+        },
+        {
+          "aop": "PACE_OCI.20240618T214818.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T214818.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194894099-OB_CLOUD",
+          "acquisition_start": "2024-06-18T21:48:18.000Z",
+          "acquisition_end": "2024-06-18T21:53:17.000Z",
+          "cloud_cover_percent": 82.8,
+          "estimated_mib": 154.4175834655762
+        },
+        {
+          "aop": "PACE_OCI.20240618T214318.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T214318.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194798810-OB_CLOUD",
+          "acquisition_start": "2024-06-18T21:43:18.000Z",
+          "acquisition_end": "2024-06-18T21:48:17.000Z",
+          "cloud_cover_percent": 84.6,
+          "estimated_mib": 147.5189819335938
+        }
+      ]
+    },
+    {
+      "id": "california-2024-06-22",
+      "split": "train",
+      "bbox": [
+        -135,
+        24,
+        -117,
+        43
+      ],
+      "target_date": "2024-06-22",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-135%2C24%2C-117%2C43&temporal=2024-06-22T00%3A00%3A00Z%2C2024-06-23T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240622T191213.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240622T191213.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194676867-OB_CLOUD",
+          "acquisition_start": "2024-06-22T19:12:13.000Z",
+          "acquisition_end": "2024-06-22T19:17:12.000Z",
+          "cloud_cover_percent": 49.1,
+          "estimated_mib": 23.73104286193848
+        },
+        {
+          "aop": "PACE_OCI.20240622T205032.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240622T205032.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194757093-OB_CLOUD",
+          "acquisition_start": "2024-06-22T20:50:32.000Z",
+          "acquisition_end": "2024-06-22T20:55:31.000Z",
+          "cloud_cover_percent": 61.2,
+          "estimated_mib": 146.7347469329834
+        },
+        {
+          "aop": "PACE_OCI.20240622T222351.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240622T222351.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195093186-OB_CLOUD",
+          "acquisition_start": "2024-06-22T22:23:51.000Z",
+          "acquisition_end": "2024-06-22T22:28:50.000Z",
+          "cloud_cover_percent": 66.3,
+          "estimated_mib": 303.6855964660645
+        }
+      ]
+    },
+    {
+      "id": "north-pacific-2024-06-02",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "target_date": "2024-06-02",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-160%2C10%2C-140%2C30&temporal=2024-06-02T00%3A00%3A00Z%2C2024-06-03T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240602T235527.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240602T235527.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194798200-OB_CLOUD",
+          "acquisition_start": "2024-06-02T23:55:27.000Z",
+          "acquisition_end": "2024-06-03T00:00:26.000Z",
+          "cloud_cover_percent": 56.1,
+          "estimated_mib": 394.3333044052124
+        },
+        {
+          "aop": "PACE_OCI.20240602T222207.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240602T222207.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4193923019-OB_CLOUD",
+          "acquisition_start": "2024-06-02T22:22:07.000Z",
+          "acquisition_end": "2024-06-02T22:27:06.000Z",
+          "cloud_cover_percent": 76.6,
+          "estimated_mib": 206.0990962982178
+        },
+        {
+          "aop": "PACE_OCI.20240602T221707.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240602T221707.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194718009-OB_CLOUD",
+          "acquisition_start": "2024-06-02T22:17:07.000Z",
+          "acquisition_end": "2024-06-02T22:22:06.000Z",
+          "cloud_cover_percent": 88.6,
+          "estimated_mib": 113.2394590377808
+        }
+      ]
+    },
+    {
+      "id": "north-pacific-2024-06-06",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "target_date": "2024-06-06",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-160%2C10%2C-140%2C30&temporal=2024-06-06T00%3A00%3A00Z%2C2024-06-07T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240606T000129.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240606T000129.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195092796-OB_CLOUD",
+          "acquisition_start": "2024-06-06T00:01:29.000Z",
+          "acquisition_end": "2024-06-06T00:06:28.000Z",
+          "cloud_cover_percent": 60.5,
+          "estimated_mib": 354.3573513031006
+        },
+        {
+          "aop": "PACE_OCI.20240606T212437.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240606T212437.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194634936-OB_CLOUD",
+          "acquisition_start": "2024-06-06T21:24:37.000Z",
+          "acquisition_end": "2024-06-06T21:29:37.000Z",
+          "cloud_cover_percent": 66.3,
+          "estimated_mib": 244.6852045059204
+        },
+        {
+          "aop": "PACE_OCI.20240606T225757.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240606T225757.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194841518-OB_CLOUD",
+          "acquisition_start": "2024-06-06T22:57:57.000Z",
+          "acquisition_end": "2024-06-06T23:02:56.000Z",
+          "cloud_cover_percent": 69.5,
+          "estimated_mib": 269.7991075515747
+        }
+      ]
+    },
+    {
+      "id": "north-pacific-2024-06-10",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "target_date": "2024-06-10",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-160%2C10%2C-140%2C30&temporal=2024-06-10T00%3A00%3A00Z%2C2024-06-11T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240610T220521.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240610T220521.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194841554-OB_CLOUD",
+          "acquisition_start": "2024-06-10T22:05:21.000Z",
+          "acquisition_end": "2024-06-10T22:10:20.000Z",
+          "cloud_cover_percent": 54.2,
+          "estimated_mib": 388.7238245010376
+        },
+        {
+          "aop": "PACE_OCI.20240610T233840.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240610T233840.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194892513-OB_CLOUD",
+          "acquisition_start": "2024-06-10T23:38:40.000Z",
+          "acquisition_end": "2024-06-10T23:43:39.000Z",
+          "cloud_cover_percent": 61.0,
+          "estimated_mib": 345.3680438995361
+        },
+        {
+          "aop": "PACE_OCI.20240610T220021.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240610T220021.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194799052-OB_CLOUD",
+          "acquisition_start": "2024-06-10T22:00:21.000Z",
+          "acquisition_end": "2024-06-10T22:05:21.000Z",
+          "cloud_cover_percent": 71.5,
+          "estimated_mib": 256.3292808532715
+        }
+      ]
+    },
+    {
+      "id": "north-pacific-2024-06-14",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "target_date": "2024-06-14",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-160%2C10%2C-140%2C30&temporal=2024-06-14T00%3A00%3A00Z%2C2024-06-15T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240614T224101.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240614T224101.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194676972-OB_CLOUD",
+          "acquisition_start": "2024-06-14T22:41:01.000Z",
+          "acquisition_end": "2024-06-14T22:46:00.000Z",
+          "cloud_cover_percent": 59.0,
+          "estimated_mib": 366.5212373733521
+        },
+        {
+          "aop": "PACE_OCI.20240614T210742.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240614T210742.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195092925-OB_CLOUD",
+          "acquisition_start": "2024-06-14T21:07:42.000Z",
+          "acquisition_end": "2024-06-14T21:12:41.000Z",
+          "cloud_cover_percent": 60.3,
+          "estimated_mib": 280.6788864135742
+        },
+        {
+          "aop": "PACE_OCI.20240614T224601.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240614T224601.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4193844807-OB_CLOUD",
+          "acquisition_start": "2024-06-14T22:46:01.000Z",
+          "acquisition_end": "2024-06-14T22:51:00.000Z",
+          "cloud_cover_percent": 76.7,
+          "estimated_mib": 201.6421566009521
+        }
+      ]
+    },
+    {
+      "id": "north-pacific-2024-06-18",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "target_date": "2024-06-18",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-160%2C10%2C-140%2C30&temporal=2024-06-18T00%3A00%3A00Z%2C2024-06-19T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240618T232137.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T232137.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194757238-OB_CLOUD",
+          "acquisition_start": "2024-06-18T23:21:37.000Z",
+          "acquisition_end": "2024-06-18T23:26:36.000Z",
+          "cloud_cover_percent": 62.1,
+          "estimated_mib": 339.3113985061646
+        },
+        {
+          "aop": "PACE_OCI.20240618T232637.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T232637.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194798986-OB_CLOUD",
+          "acquisition_start": "2024-06-18T23:26:37.000Z",
+          "acquisition_end": "2024-06-18T23:31:36.000Z",
+          "cloud_cover_percent": 74.8,
+          "estimated_mib": 210.9559659957886
+        },
+        {
+          "aop": "PACE_OCI.20240618T214818.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T214818.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194894099-OB_CLOUD",
+          "acquisition_start": "2024-06-18T21:48:18.000Z",
+          "acquisition_end": "2024-06-18T21:53:17.000Z",
+          "cloud_cover_percent": 82.8,
+          "estimated_mib": 154.4175834655762
+        }
+      ]
+    },
+    {
+      "id": "north-pacific-2024-06-22",
+      "split": "train",
+      "bbox": [
+        -160,
+        10,
+        -140,
+        30
+      ],
+      "target_date": "2024-06-22",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-160%2C10%2C-140%2C30&temporal=2024-06-22T00%3A00%3A00Z%2C2024-06-23T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240622T222351.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240622T222351.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195093186-OB_CLOUD",
+          "acquisition_start": "2024-06-22T22:23:51.000Z",
+          "acquisition_end": "2024-06-22T22:28:50.000Z",
+          "cloud_cover_percent": 66.3,
+          "estimated_mib": 303.6855964660645
+        },
+        {
+          "aop": "PACE_OCI.20240622T222851.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240622T222851.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195113325-OB_CLOUD",
+          "acquisition_start": "2024-06-22T22:28:51.000Z",
+          "acquisition_end": "2024-06-22T22:33:50.000Z",
+          "cloud_cover_percent": 81.8,
+          "estimated_mib": 166.062198638916
+        }
+      ]
+    },
+    {
+      "id": "north-atlantic-2024-06-02",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "target_date": "2024-06-02",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-55%2C25%2C-30%2C50&temporal=2024-06-02T00%3A00%3A00Z%2C2024-06-03T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240602T141031.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240602T141031.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194840717-OB_CLOUD",
+          "acquisition_start": "2024-06-02T14:10:31.000Z",
+          "acquisition_end": "2024-06-02T14:15:31.000Z",
+          "cloud_cover_percent": 65.7,
+          "estimated_mib": 298.9060382843018
+        },
+        {
+          "aop": "PACE_OCI.20240602T154850.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240602T154850.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194538588-OB_CLOUD",
+          "acquisition_start": "2024-06-02T15:48:50.000Z",
+          "acquisition_end": "2024-06-02T15:53:50.000Z",
+          "cloud_cover_percent": 66.2,
+          "estimated_mib": 293.6172580718994
+        },
+        {
+          "aop": "PACE_OCI.20240602T141531.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240602T141531.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194086585-OB_CLOUD",
+          "acquisition_start": "2024-06-02T14:15:31.000Z",
+          "acquisition_end": "2024-06-02T14:20:30.000Z",
+          "cloud_cover_percent": 76.3,
+          "estimated_mib": 209.716649055481
+        }
+      ]
+    },
+    {
+      "id": "north-atlantic-2024-06-06",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "target_date": "2024-06-06",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-55%2C25%2C-30%2C50&temporal=2024-06-06T00%3A00%3A00Z%2C2024-06-07T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240606T162940.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240606T162940.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194431736-OB_CLOUD",
+          "acquisition_start": "2024-06-06T16:29:40.000Z",
+          "acquisition_end": "2024-06-06T16:34:39.000Z",
+          "cloud_cover_percent": 61.9,
+          "estimated_mib": 316.1456356048584
+        },
+        {
+          "aop": "PACE_OCI.20240606T162440.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240606T162440.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195092785-OB_CLOUD",
+          "acquisition_start": "2024-06-06T16:24:40.000Z",
+          "acquisition_end": "2024-06-06T16:29:40.000Z",
+          "cloud_cover_percent": 64.7,
+          "estimated_mib": 303.0391578674316
+        },
+        {
+          "aop": "PACE_OCI.20240606T163440.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240606T163440.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194718085-OB_CLOUD",
+          "acquisition_start": "2024-06-06T16:34:40.000Z",
+          "acquisition_end": "2024-06-06T16:39:39.000Z",
+          "cloud_cover_percent": 72.0,
+          "estimated_mib": 72.31267356872559
+        }
+      ]
+    },
+    {
+      "id": "north-atlantic-2024-06-10",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "target_date": "2024-06-10",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-55%2C25%2C-30%2C50&temporal=2024-06-10T00%3A00%3A00Z%2C2024-06-11T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240610T153205.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240610T153205.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195113464-OB_CLOUD",
+          "acquisition_start": "2024-06-10T15:32:05.000Z",
+          "acquisition_end": "2024-06-10T15:37:04.000Z",
+          "cloud_cover_percent": 63.2,
+          "estimated_mib": 318.9162282943726
+        },
+        {
+          "aop": "PACE_OCI.20240610T152705.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240610T152705.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194757008-OB_CLOUD",
+          "acquisition_start": "2024-06-10T15:27:05.000Z",
+          "acquisition_end": "2024-06-10T15:32:04.000Z",
+          "cloud_cover_percent": 69.7,
+          "estimated_mib": 266.2452478408813
+        },
+        {
+          "aop": "PACE_OCI.20240610T171524.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240610T171524.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195151238-OB_CLOUD",
+          "acquisition_start": "2024-06-10T17:15:24.000Z",
+          "acquisition_end": "2024-06-10T17:20:24.000Z",
+          "cloud_cover_percent": 70.2,
+          "estimated_mib": 59.79291343688965
+        }
+      ]
+    },
+    {
+      "id": "north-atlantic-2024-06-14",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "target_date": "2024-06-14",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-55%2C25%2C-30%2C50&temporal=2024-06-14T00%3A00%3A00Z%2C2024-06-15T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240614T143426.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240614T143426.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194354976-OB_CLOUD",
+          "acquisition_start": "2024-06-14T14:34:26.000Z",
+          "acquisition_end": "2024-06-14T14:39:25.000Z",
+          "cloud_cover_percent": 52.4,
+          "estimated_mib": 413.4317893981934
+        },
+        {
+          "aop": "PACE_OCI.20240614T161245.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240614T161245.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194000860-OB_CLOUD",
+          "acquisition_start": "2024-06-14T16:12:45.000Z",
+          "acquisition_end": "2024-06-14T16:17:44.000Z",
+          "cloud_cover_percent": 60.7,
+          "estimated_mib": 326.3459224700928
+        },
+        {
+          "aop": "PACE_OCI.20240614T160745.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240614T160745.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194481171-OB_CLOUD",
+          "acquisition_start": "2024-06-14T16:07:45.000Z",
+          "acquisition_end": "2024-06-14T16:12:44.000Z",
+          "cloud_cover_percent": 70.2,
+          "estimated_mib": 270.2495050430298
+        }
+      ]
+    },
+    {
+      "id": "north-atlantic-2024-06-18",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "target_date": "2024-06-18",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-55%2C25%2C-30%2C50&temporal=2024-06-18T00%3A00%3A00Z%2C2024-06-19T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240618T165321.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T165321.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194841587-OB_CLOUD",
+          "acquisition_start": "2024-06-18T16:53:21.000Z",
+          "acquisition_end": "2024-06-18T16:58:21.000Z",
+          "cloud_cover_percent": 54.9,
+          "estimated_mib": 321.9276428222656
+        },
+        {
+          "aop": "PACE_OCI.20240618T133643.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T133643.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194677031-OB_CLOUD",
+          "acquisition_start": "2024-06-18T13:36:43.000Z",
+          "acquisition_end": "2024-06-18T13:41:42.000Z",
+          "cloud_cover_percent": 61.2,
+          "estimated_mib": 303.9720029830933
+        },
+        {
+          "aop": "PACE_OCI.20240618T151502.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240618T151502.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194799316-OB_CLOUD",
+          "acquisition_start": "2024-06-18T15:15:02.000Z",
+          "acquisition_end": "2024-06-18T15:20:01.000Z",
+          "cloud_cover_percent": 65.2,
+          "estimated_mib": 302.18443775177
+        }
+      ]
+    },
+    {
+      "id": "north-atlantic-2024-06-22",
+      "split": "train",
+      "bbox": [
+        -55,
+        25,
+        -30,
+        50
+      ],
+      "target_date": "2024-06-22",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-55%2C25%2C-30%2C50&temporal=2024-06-22T00%3A00%3A00Z%2C2024-06-23T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240622T155535.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240622T155535.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194677065-OB_CLOUD",
+          "acquisition_start": "2024-06-22T15:55:35.000Z",
+          "acquisition_end": "2024-06-22T16:00:35.000Z",
+          "cloud_cover_percent": 64.1,
+          "estimated_mib": 303.5319480895996
+        },
+        {
+          "aop": "PACE_OCI.20240622T141717.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240622T141717.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194481489-OB_CLOUD",
+          "acquisition_start": "2024-06-22T14:17:17.000Z",
+          "acquisition_end": "2024-06-22T14:22:17.000Z",
+          "cloud_cover_percent": 68.0,
+          "estimated_mib": 277.070237159729
+        },
+        {
+          "aop": "PACE_OCI.20240622T160035.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240622T160035.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194719521-OB_CLOUD",
+          "acquisition_start": "2024-06-22T16:00:35.000Z",
+          "acquisition_end": "2024-06-22T16:05:34.000Z",
+          "cloud_cover_percent": 77.7,
+          "estimated_mib": 146.0953578948975
+        }
+      ]
+    },
+    {
+      "id": "east-atlantic-2024-07-03",
+      "split": "validation",
+      "bbox": [
+        -25,
+        25,
+        -10,
+        45
+      ],
+      "target_date": "2024-07-03",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-25%2C25%2C-10%2C45&temporal=2024-07-03T00%3A00%3A00Z%2C2024-07-04T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240703T122718.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240703T122718.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194841517-OB_CLOUD",
+          "acquisition_start": "2024-07-03T12:27:18.000Z",
+          "acquisition_end": "2024-07-03T12:32:17.000Z",
+          "cloud_cover_percent": 41.1,
+          "estimated_mib": 131.5753479003906
+        },
+        {
+          "aop": "PACE_OCI.20240703T140537.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240703T140537.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194719447-OB_CLOUD",
+          "acquisition_start": "2024-07-03T14:05:37.000Z",
+          "acquisition_end": "2024-07-03T14:10:36.000Z",
+          "cloud_cover_percent": 84.8,
+          "estimated_mib": 142.5822706222534
+        },
+        {
+          "aop": "PACE_OCI.20240703T140037.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240703T140037.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194013672-OB_CLOUD",
+          "acquisition_start": "2024-07-03T14:00:37.000Z",
+          "acquisition_end": "2024-07-03T14:05:36.000Z",
+          "cloud_cover_percent": 91.2,
+          "estimated_mib": 23.94227886199951
+        }
+      ]
+    },
+    {
+      "id": "east-atlantic-2024-07-11",
+      "split": "validation",
+      "bbox": [
+        -25,
+        25,
+        -10,
+        45
+      ],
+      "target_date": "2024-07-11",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-25%2C25%2C-10%2C45&temporal=2024-07-11T00%3A00%3A00Z%2C2024-07-12T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240711T120932.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240711T120932.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4193806152-OB_CLOUD",
+          "acquisition_start": "2024-07-11T12:09:32.000Z",
+          "acquisition_end": "2024-07-11T12:14:31.000Z",
+          "cloud_cover_percent": 31.8,
+          "estimated_mib": 218.3206853866577
+        },
+        {
+          "aop": "PACE_OCI.20240711T134751.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240711T134751.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194432006-OB_CLOUD",
+          "acquisition_start": "2024-07-11T13:47:51.000Z",
+          "acquisition_end": "2024-07-11T13:52:51.000Z",
+          "cloud_cover_percent": 62.0,
+          "estimated_mib": 303.0439262390137
+        },
+        {
+          "aop": "PACE_OCI.20240711T134251.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240711T134251.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194354642-OB_CLOUD",
+          "acquisition_start": "2024-07-11T13:42:51.000Z",
+          "acquisition_end": "2024-07-11T13:47:50.000Z",
+          "cloud_cover_percent": 82.1,
+          "estimated_mib": 19.16501712799072
+        }
+      ]
+    },
+    {
+      "id": "east-atlantic-2024-07-19",
+      "split": "validation",
+      "bbox": [
+        -25,
+        25,
+        -10,
+        45
+      ],
+      "target_date": "2024-07-19",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-25%2C25%2C-10%2C45&temporal=2024-07-19T00%3A00%3A00Z%2C2024-07-20T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240719T150812.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240719T150812.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194636783-OB_CLOUD",
+          "acquisition_start": "2024-07-19T15:08:12.000Z",
+          "acquisition_end": "2024-07-19T15:13:11.000Z",
+          "cloud_cover_percent": 43.0,
+          "estimated_mib": 495.8673458099365
+        },
+        {
+          "aop": "PACE_OCI.20240719T115635.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240719T115635.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194841741-OB_CLOUD",
+          "acquisition_start": "2024-07-19T11:56:35.000Z",
+          "acquisition_end": "2024-07-19T12:01:35.000Z",
+          "cloud_cover_percent": 57.2,
+          "estimated_mib": 141.3341302871704
+        },
+        {
+          "aop": "PACE_OCI.20240719T132954.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240719T132954.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194636900-OB_CLOUD",
+          "acquisition_start": "2024-07-19T13:29:54.000Z",
+          "acquisition_end": "2024-07-19T13:34:54.000Z",
+          "cloud_cover_percent": 57.3,
+          "estimated_mib": 274.2274122238159
+        }
+      ]
+    },
+    {
+      "id": "south-indian-2024-07-03",
+      "split": "validation",
+      "bbox": [
+        45,
+        -35,
+        75,
+        -10
+      ],
+      "target_date": "2024-07-03",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=45%2C-35%2C75%2C-10&temporal=2024-07-03T00%3A00%3A00Z%2C2024-07-04T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240703T103400.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240703T103400.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194635006-OB_CLOUD",
+          "acquisition_start": "2024-07-03T10:34:00.000Z",
+          "acquisition_end": "2024-07-03T10:38:59.000Z",
+          "cloud_cover_percent": 36.8,
+          "estimated_mib": 299.2702407836914
+        },
+        {
+          "aop": "PACE_OCI.20240703T072222.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240703T072222.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194894718-OB_CLOUD",
+          "acquisition_start": "2024-07-03T07:22:22.000Z",
+          "acquisition_end": "2024-07-03T07:27:21.000Z",
+          "cloud_cover_percent": 56.8,
+          "estimated_mib": 383.7180805206299
+        },
+        {
+          "aop": "PACE_OCI.20240703T103900.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240703T103900.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194587637-OB_CLOUD",
+          "acquisition_start": "2024-07-03T10:39:00.000Z",
+          "acquisition_end": "2024-07-03T10:44:00.000Z",
+          "cloud_cover_percent": 60.9,
+          "estimated_mib": 78.5630521774292
+        }
+      ]
+    },
+    {
+      "id": "south-indian-2024-07-11",
+      "split": "validation",
+      "bbox": [
+        45,
+        -35,
+        75,
+        -10
+      ],
+      "target_date": "2024-07-11",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=45%2C-35%2C75%2C-10&temporal=2024-07-11T00%3A00%3A00Z%2C2024-07-12T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240711T101614.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240711T101614.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194678382-OB_CLOUD",
+          "acquisition_start": "2024-07-11T10:16:14.000Z",
+          "acquisition_end": "2024-07-11T10:21:14.000Z",
+          "cloud_cover_percent": 20.8,
+          "estimated_mib": 489.1289615631104
+        },
+        {
+          "aop": "PACE_OCI.20240711T083755.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240711T083755.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195113609-OB_CLOUD",
+          "acquisition_start": "2024-07-11T08:37:55.000Z",
+          "acquisition_end": "2024-07-11T08:42:54.000Z",
+          "cloud_cover_percent": 53.2,
+          "estimated_mib": 419.4779748916626
+        },
+        {
+          "aop": "PACE_OCI.20240711T084255.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240711T084255.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195151674-OB_CLOUD",
+          "acquisition_start": "2024-07-11T08:42:55.000Z",
+          "acquisition_end": "2024-07-11T08:47:55.000Z",
+          "cloud_cover_percent": 69.1,
+          "estimated_mib": 280.1293277740479
+        }
+      ]
+    },
+    {
+      "id": "south-indian-2024-07-19",
+      "split": "validation",
+      "bbox": [
+        45,
+        -35,
+        75,
+        -10
+      ],
+      "target_date": "2024-07-19",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=45%2C-35%2C75%2C-10&temporal=2024-07-19T00%3A00%3A00Z%2C2024-07-20T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240719T095817.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240719T095817.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194894878-OB_CLOUD",
+          "acquisition_start": "2024-07-19T09:58:17.000Z",
+          "acquisition_end": "2024-07-19T10:03:16.000Z",
+          "cloud_cover_percent": 30.7,
+          "estimated_mib": 468.3227939605713
+        },
+        {
+          "aop": "PACE_OCI.20240719T081958.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240719T081958.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194842014-OB_CLOUD",
+          "acquisition_start": "2024-07-19T08:19:58.000Z",
+          "acquisition_end": "2024-07-19T08:24:57.000Z",
+          "cloud_cover_percent": 52.0,
+          "estimated_mib": 424.826865196228
+        },
+        {
+          "aop": "PACE_OCI.20240719T100317.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240719T100317.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194678279-OB_CLOUD",
+          "acquisition_start": "2024-07-19T10:03:17.000Z",
+          "acquisition_end": "2024-07-19T10:08:17.000Z",
+          "cloud_cover_percent": 67.1,
+          "estimated_mib": 238.5908231735229
+        }
+      ]
+    },
+    {
+      "id": "benguela-2024-08-03",
+      "split": "test",
+      "bbox": [
+        0,
+        -35,
+        20,
+        -10
+      ],
+      "target_date": "2024-08-03",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=0%2C-35%2C20%2C-10&temporal=2024-08-03T00%3A00%3A00Z%2C2024-08-04T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240803T120338.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240803T120338.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4193922910-OB_CLOUD",
+          "acquisition_start": "2024-08-03T12:03:38.000Z",
+          "acquisition_end": "2024-08-03T12:08:37.000Z",
+          "cloud_cover_percent": 37.3,
+          "estimated_mib": 111.8283443450928
+        },
+        {
+          "aop": "PACE_OCI.20240803T134657.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240803T134657.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194588144-OB_CLOUD",
+          "acquisition_start": "2024-08-03T13:46:57.000Z",
+          "acquisition_end": "2024-08-03T13:51:57.000Z",
+          "cloud_cover_percent": 46.2,
+          "estimated_mib": 466.7315893173218
+        },
+        {
+          "aop": "PACE_OCI.20240803T120838.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240803T120838.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194636441-OB_CLOUD",
+          "acquisition_start": "2024-08-03T12:08:38.000Z",
+          "acquisition_end": "2024-08-03T12:13:37.000Z",
+          "cloud_cover_percent": 64.2,
+          "estimated_mib": 21.65780067443848
+        }
+      ]
+    },
+    {
+      "id": "benguela-2024-08-11",
+      "split": "test",
+      "bbox": [
+        0,
+        -35,
+        20,
+        -10
+      ],
+      "target_date": "2024-08-11",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=0%2C-35%2C20%2C-10&temporal=2024-08-11T00%3A00%3A00Z%2C2024-08-12T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240811T114502.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240811T114502.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194678294-OB_CLOUD",
+          "acquisition_start": "2024-08-11T11:45:02.000Z",
+          "acquisition_end": "2024-08-11T11:50:01.000Z",
+          "cloud_cover_percent": 45.6,
+          "estimated_mib": 102.9279279708862
+        },
+        {
+          "aop": "PACE_OCI.20240811T115002.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240811T115002.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194841945-OB_CLOUD",
+          "acquisition_start": "2024-08-11T11:50:02.000Z",
+          "acquisition_end": "2024-08-11T11:55:02.000Z",
+          "cloud_cover_percent": 48.2,
+          "estimated_mib": 18.24598789215088
+        },
+        {
+          "aop": "PACE_OCI.20240811T132320.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240811T132320.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194720106-OB_CLOUD",
+          "acquisition_start": "2024-08-11T13:23:20.000Z",
+          "acquisition_end": "2024-08-11T13:28:19.000Z",
+          "cloud_cover_percent": 71.1,
+          "estimated_mib": 259.564112663269
+        }
+      ]
+    },
+    {
+      "id": "benguela-2024-08-19",
+      "split": "test",
+      "bbox": [
+        0,
+        -35,
+        20,
+        -10
+      ],
+      "target_date": "2024-08-19",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=0%2C-35%2C20%2C-10&temporal=2024-08-19T00%3A00%3A00Z%2C2024-08-20T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240819T113051.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240819T113051.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4193922697-OB_CLOUD",
+          "acquisition_start": "2024-08-19T11:30:51.000Z",
+          "acquisition_end": "2024-08-19T11:35:50.000Z",
+          "cloud_cover_percent": 20.3,
+          "estimated_mib": 14.15130805969238
+        },
+        {
+          "aop": "PACE_OCI.20240819T112551.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240819T112551.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194799834-OB_CLOUD",
+          "acquisition_start": "2024-08-19T11:25:51.000Z",
+          "acquisition_end": "2024-08-19T11:30:51.000Z",
+          "cloud_cover_percent": 27.0,
+          "estimated_mib": 286.9628353118896
+        },
+        {
+          "aop": "PACE_OCI.20240819T130409.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240819T130409.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4193845052-OB_CLOUD",
+          "acquisition_start": "2024-08-19T13:04:09.000Z",
+          "acquisition_end": "2024-08-19T13:09:09.000Z",
+          "cloud_cover_percent": 67.1,
+          "estimated_mib": 290.8773059844971
+        }
+      ]
+    },
+    {
+      "id": "south-pacific-2024-08-03",
+      "split": "test",
+      "bbox": [
+        -115,
+        -35,
+        -85,
+        -10
+      ],
+      "target_date": "2024-08-03",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-115%2C-35%2C-85%2C-10&temporal=2024-08-03T00%3A00%3A00Z%2C2024-08-04T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240803T202009.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240803T202009.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195151726-OB_CLOUD",
+          "acquisition_start": "2024-08-03T20:20:09.000Z",
+          "acquisition_end": "2024-08-03T20:25:08.000Z",
+          "cloud_cover_percent": 63.5,
+          "estimated_mib": 324.9207525253296
+        },
+        {
+          "aop": "PACE_OCI.20240803T215328.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240803T215328.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194799705-OB_CLOUD",
+          "acquisition_start": "2024-08-03T21:53:28.000Z",
+          "acquisition_end": "2024-08-03T21:58:27.000Z",
+          "cloud_cover_percent": 66.8,
+          "estimated_mib": 297.9490604400635
+        },
+        {
+          "aop": "PACE_OCI.20240803T183651.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240803T183651.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194481575-OB_CLOUD",
+          "acquisition_start": "2024-08-03T18:36:51.000Z",
+          "acquisition_end": "2024-08-03T18:41:50.000Z",
+          "cloud_cover_percent": 66.9,
+          "estimated_mib": 271.0965576171875
+        }
+      ]
+    },
+    {
+      "id": "south-pacific-2024-08-11",
+      "split": "test",
+      "bbox": [
+        -115,
+        -35,
+        -85,
+        -10
+      ],
+      "target_date": "2024-08-11",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-115%2C-35%2C-85%2C-10&temporal=2024-08-11T00%3A00%3A00Z%2C2024-08-12T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240811T181815.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240811T181815.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194588192-OB_CLOUD",
+          "acquisition_start": "2024-08-11T18:18:15.000Z",
+          "acquisition_end": "2024-08-11T18:23:14.000Z",
+          "cloud_cover_percent": 39.7,
+          "estimated_mib": 362.3078346252441
+        },
+        {
+          "aop": "PACE_OCI.20240811T213951.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240811T213951.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195151810-OB_CLOUD",
+          "acquisition_start": "2024-08-11T21:39:51.000Z",
+          "acquisition_end": "2024-08-11T21:44:50.000Z",
+          "cloud_cover_percent": 43.1,
+          "estimated_mib": 492.098123550415
+        },
+        {
+          "aop": "PACE_OCI.20240811T213451.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240811T213451.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194799789-OB_CLOUD",
+          "acquisition_start": "2024-08-11T21:34:51.000Z",
+          "acquisition_end": "2024-08-11T21:39:50.000Z",
+          "cloud_cover_percent": 55.5,
+          "estimated_mib": 398.6727914810181
+        }
+      ]
+    },
+    {
+      "id": "south-pacific-2024-08-19",
+      "split": "test",
+      "bbox": [
+        -115,
+        -35,
+        -85,
+        -10
+      ],
+      "target_date": "2024-08-19",
+      "query_url": "https://cmr.earthdata.nasa.gov/search/granules.json?collection_concept_id=C4124887023-OB_CLOUD&bounding_box=-115%2C-35%2C-85%2C-10&temporal=2024-08-19T00%3A00%3A00Z%2C2024-08-20T00%3A00%3A00Z&page_size=200",
+      "candidates": [
+        {
+          "aop": "PACE_OCI.20240819T212038.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240819T212038.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4195151781-OB_CLOUD",
+          "acquisition_start": "2024-08-19T21:20:38.000Z",
+          "acquisition_end": "2024-08-19T21:25:37.000Z",
+          "cloud_cover_percent": 48.5,
+          "estimated_mib": 455.4090547561646
+        },
+        {
+          "aop": "PACE_OCI.20240819T194220.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240819T194220.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194895606-OB_CLOUD",
+          "acquisition_start": "2024-08-19T19:42:20.000Z",
+          "acquisition_end": "2024-08-19T19:47:19.000Z",
+          "cloud_cover_percent": 57.2,
+          "estimated_mib": 379.4097557067871
+        },
+        {
+          "aop": "PACE_OCI.20240819T193720.L2.OC_AOP.V3_2.nc",
+          "url": "https://obdaac-tea.earthdatacloud.nasa.gov/ob-cumulus-prod-public/PACE_OCI.20240819T193720.L2.OC_AOP.V3_2.nc",
+          "cmr_id": "G4194758827-OB_CLOUD",
+          "acquisition_start": "2024-08-19T19:37:20.000Z",
+          "acquisition_end": "2024-08-19T19:42:19.000Z",
+          "cloud_cover_percent": 63.8,
+          "estimated_mib": 329.6698732376099
+        }
+      ]
+    }
+  ],
+  "selection": "Fixed regions and dates. Try up to three candidates in increasing whole-granule cloud cover; accept the first with at least 16 finite, quality-screened chips. No model or biological scores select scenes."
+}

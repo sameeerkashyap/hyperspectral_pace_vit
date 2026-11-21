@@ -1,5 +1,16 @@
 # Run experiments locally or on Nautilus
 
+For the current AOP-only research goal, use the
+[self-supervised discovery guide](discovery_experiment.md) and
+`nautilus/discovery-job.yaml`. It requires no BGC training labels.
+
+The [completed 30-scene campaign](discovery_multiscene_results.md) uses versioned
+code archives on the results PVC. The launch templates verify archive hashes
+before unpacking code. New campaigns need new source versions, Job names, and
+output directories. The [protocol](discovery_multiscene_run.md) records the
+actual paths and hashes. The image-build route below remains available for
+other plans.
+
 For the new full-spectrum spatial MAE and dense supervised comparison, use
 [the chlorophyll benchmark guide](chlorophyll_benchmark.md) and
 `nautilus/chlorophyll-job.yaml`. That 15-run plan requires real matched scenes;
@@ -180,8 +191,10 @@ secret is built into this image.
 
 The local real-data pilot and runner tests were executed. Nautilus access to
 `sea-meets-the-stars` and permission to create Jobs were verified on 2026-11-19.
-No image has been built or pushed for this project, and no Nautilus experiments
-have been submitted. Always select `--context nautilus` explicitly.
+No project image has been built or pushed. The AOP-only single-scene pilot was
+submitted on 2026-11-20 using a public Python image and a mounted source snapshot;
+see [its setup and limits](discovery_experiment.md#first-run-with-the-existing-download).
+Always select `--context nautilus` explicitly.
 Storage class, quota, GPU driver support, registry access and final image size
 must be checked in the target environment.
 

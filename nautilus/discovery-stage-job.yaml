@@ -1,0 +1,40 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pace-discovery-stage-v2
+  namespace: sea-meets-the-stars
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      priorityClassName: opportunistic
+      automountServiceAccountToken: false
+      containers:
+        - name: stage
+          image: python:3.11-slim-bookworm
+          command:
+            - /bin/sh
+            - -ec
+            - |
+              python -c 'import hashlib; from pathlib import Path; p=Path("/results/code/discovery-stage-v2.tar.gz"); assert hashlib.file_digest(p.open("rb"),"sha256").hexdigest()=="4194e362929f7a3ca3b08938eb5bcf019698a8cfef4d1b1cf6041a73b52081b0"'
+              mkdir -p /source
+              tar -xzf /results/code/discovery-stage-v2.tar.gz -C /source
+              exec /bin/sh /source/discovery-stage.sh
+          env:
+            - {name: UV_CACHE_DIR, value: /runtime/uv-cache}
+            - {name: OMP_NUM_THREADS, value: "2"}
+          resources:
+            requests: {cpu: "2", memory: 8Gi, ephemeral-storage: 2Gi}
+            limits: {cpu: "2", memory: 8Gi, ephemeral-storage: 4Gi}
+          volumeMounts:
+            - {name: results, mountPath: /results}
+            - {name: runtime, mountPath: /runtime}
+            - {name: earthdata, mountPath: /credentials, readOnly: true}
+      volumes:
+        - name: results
+          persistentVolumeClaim: {claimName: pace-experiment-results}
+        - name: runtime
+          emptyDir: {sizeLimit: 4Gi}
+        - name: earthdata
+          secret: {secretName: earthdata-netrc, defaultMode: 256}

@@ -1,0 +1,35 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pace-discovery-prepare-v1
+  namespace: sea-meets-the-stars
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      priorityClassName: opportunistic
+      automountServiceAccountToken: false
+      nodeSelector:
+        kubernetes.io/hostname: gpu-18.nrp.mghpcc.org
+      containers:
+        - name: prepare
+          image: python:3.11-slim-bookworm
+          command:
+            - /bin/sh
+            - -ec
+            - |
+              python -c 'import hashlib; from pathlib import Path; p=Path("/results/code/discovery-prepare-v4.tar.gz"); assert hashlib.file_digest(p.open("rb"),"sha256").hexdigest()=="e1faa872a0c227226587c451b9826ce46e349a5d350ee2180078f34b8def044c"'
+              mkdir -p /source
+              tar -xzf /results/code/discovery-prepare-v4.tar.gz -C /source
+              exec /bin/sh /source/discovery-prepare.sh
+          env:
+            - {name: OMP_NUM_THREADS, value: "4"}
+          resources:
+            requests: {cpu: "4", memory: 8Gi, ephemeral-storage: 1Gi}
+            limits: {cpu: "4", memory: 8Gi, ephemeral-storage: 2Gi}
+          volumeMounts:
+            - {name: results, mountPath: /results}
+      volumes:
+        - name: results
+          persistentVolumeClaim: {claimName: pace-experiment-results}

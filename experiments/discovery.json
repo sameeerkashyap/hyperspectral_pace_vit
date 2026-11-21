@@ -1,0 +1,141 @@
+{
+  "datasets": [],
+  "experiments": [
+    {
+      "name": "pca",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "pca"
+      ]
+    },
+    {
+      "name": "spectral-ae-mixed-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "spectral-ae",
+        "--masking",
+        "mixed",
+        "--seed",
+        "0"
+      ]
+    },
+    {
+      "name": "mae-mixed-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "mae",
+        "--masking",
+        "mixed",
+        "--seed",
+        "0"
+      ]
+    },
+    {
+      "name": "mae-random-seed-0",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "mae",
+        "--masking",
+        "random",
+        "--seed",
+        "0"
+      ]
+    },
+    {
+      "name": "spectral-ae-mixed-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "spectral-ae",
+        "--masking",
+        "mixed",
+        "--seed",
+        "1"
+      ]
+    },
+    {
+      "name": "mae-mixed-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "mae",
+        "--masking",
+        "mixed",
+        "--seed",
+        "1"
+      ]
+    },
+    {
+      "name": "mae-random-seed-1",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "mae",
+        "--masking",
+        "random",
+        "--seed",
+        "1"
+      ]
+    },
+    {
+      "name": "spectral-ae-mixed-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "spectral-ae",
+        "--masking",
+        "mixed",
+        "--seed",
+        "2"
+      ]
+    },
+    {
+      "name": "mae-mixed-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "mae",
+        "--masking",
+        "mixed",
+        "--seed",
+        "2"
+      ]
+    },
+    {
+      "name": "mae-random-seed-2",
+      "command": [
+        "python",
+        "-m",
+        "src.discovery",
+        "--method",
+        "mae",
+        "--masking",
+        "random",
+        "--seed",
+        "2"
+      ]
+    }
+  ]
+}

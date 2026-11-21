@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 .tokensave/
 data/raw/
+*.nc
 *.egg-info/
 .DS_Store
 outputs/

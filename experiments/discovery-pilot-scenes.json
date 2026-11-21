@@ -1,0 +1,17 @@
+{
+  "scope": "single-scene-spatial-pilot",
+  "block_size": 128,
+  "scenes": [
+    {
+      "id": "pace-20240305",
+      "split": "train",
+      "aop": "PACE_OCI.20240305T000858.L2.OC_AOP.V3_2.nc",
+      "bbox": [
+        -180,
+        -90,
+        180,
+        90
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pace-discovery-pilot-v1-retry1
+  namespace: sea-meets-the-stars
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      priorityClassName: opportunistic
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: NotIn
+                    values: [k8s-chase-ci-01.calit2.optiputer.net]
+      containers:
+        - name: experiment
+          image: python:3.11-slim-bookworm
+          command:
+            - /bin/sh
+            - -ec
+            - |
+              python -c 'import hashlib; from pathlib import Path; p=Path("/results/code/discovery-pilot-source.tar.gz"); assert hashlib.file_digest(p.open("rb"),"sha256").hexdigest()=="42fda417df937fc3849f5bc69c8ae5bbc14a398a36aeb862d1572d159ed9357f"'
+              mkdir -p /source
+              tar -xzf /results/code/discovery-pilot-source.tar.gz -C /source
+              exec /bin/sh /source/discovery-pilot.sh
+          env:
+            - {name: SCENE_MANIFEST, value: /source/discovery-pilot-scenes.json}
+            - {name: DATA_DIR, value: /results/data}
+            - {name: OUTPUT_ROOT, value: /results/discovery-pilot-v1}
+            - {name: UV_CACHE_DIR, value: /runtime/uv-cache}
+            - {name: OMP_NUM_THREADS, value: "4"}
+          resources:
+            requests: {cpu: "4", memory: 16Gi, nvidia.com/gpu: "1", ephemeral-storage: 12Gi}
+            limits: {cpu: "4", memory: 16Gi, nvidia.com/gpu: "1", ephemeral-storage: 24Gi}
+          volumeMounts:
+            - {name: results, mountPath: /results}
+            - {name: runtime, mountPath: /runtime}
+            - {name: shared-memory, mountPath: /dev/shm}
+      volumes:
+        - name: results
+          persistentVolumeClaim: {claimName: pace-experiment-results}
+        - name: runtime
+          emptyDir: {sizeLimit: 24Gi}
+        - name: shared-memory
+          emptyDir: {medium: Memory, sizeLimit: 1Gi}

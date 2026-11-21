@@ -1,0 +1,91 @@
+{
+  "status": "complete",
+  "date": "2026-11-20",
+  "context": "nautilus",
+  "namespace": "sea-meets-the-stars",
+  "staging_job": "pace-discovery-stage-v2",
+  "training_job": "pace-optical-discovery-v3",
+  "source_sha256": "42306420d54b540cb03dce35bf30bc83bbe269c9a3af29e7b0965e2b21322402",
+  "candidate_manifest": "experiments/discovery-candidates-v2.json",
+  "candidate_manifest_sha256": "3e938227f74ea8ef71251bbbb8988f2d079bfe28c663466058ffd7f03eb856e0",
+  "selected_manifest_on_pvc": "/results/discovery-prepared-v1/scenes.json",
+  "data_on_pvc": "/results/data/discovery-v2",
+  "outputs_on_pvc": "/results/discovery-v1",
+  "pvc": "pace-experiment-results",
+  "planned_scene_counts": {
+    "train": 18,
+    "validation": 6,
+    "test": 6
+  },
+  "methods": [
+    "pca",
+    "spectral-ae",
+    "mae-mixed",
+    "mae-random"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "neural_updates": 1000,
+  "tests": {
+    "passed": 22,
+    "skipped": 1,
+    "skip_reason": "Jupyter kernel ports blocked by local sandbox"
+  },
+  "earthdata_auth_check": "HTTP 206; valid 8-byte HDF5 header; no credentials printed",
+  "first_staging_attempt": "Failed before training: the first California slot had no usable chips. Broader fixed date windows and coverage ranking used in attempt 2.",
+  "preparation_job": "pace-discovery-prepare-v1",
+  "download_source_configmap": "pace-discovery-source-v2",
+  "download_source_sha256": "9aa961c49c36fc2f2e8d6698e36849a49bc950d310c4cbae41a0781249cf0173",
+  "distinct_granules": 30,
+  "raw_gib": 9.102411810308695,
+  "chips": {
+    "train": 2206,
+    "validation": 657,
+    "test": 768
+  },
+  "prepared_mib": 515.958737373352,
+  "raw_verification_jobs": "completed",
+  "comparison_job": "pace-discovery-compare-v1",
+  "source_bundle_on_pvc": "/results/code/discovery-v5.tar.gz",
+  "source_archive_sha256": "d364ab0a1a406479d4430821a48f724b3118fc5fbfa49f99a58fbe6548cb6095",
+  "preparation_source_sha256": "158445760602b3108bd0d5ff11c3213f42200c328ba9fcd1eb68a5e918ab7caf",
+  "attempts_on_pvc": "/results/discovery-v1-attempts",
+  "retry_reason": "The opportunistic v1 GPU Job was preempted before producing experiment outputs. v2 leaves priority unset, ignores DisruptionTarget failures, and keeps separate per-pod attempts.",
+  "comparison_mode": "Automatically waits for ten completed published results; no elapsed-time cutoff.",
+  "completed_before_retry": 5,
+  "second_retry_reason": "A late ContainerStatusUnknown exit 137 from the faulty ci-03 node matched the broad FailJob rule. v3 excludes ci-03 and fails immediately only on program exits 1 and 2; other infrastructure failures retry. Five completed results are reused.",
+  "completed_experiments": 10,
+  "pairwise_comparisons": 45,
+  "training_completion_utc": "2026-11-20T22:04:43Z",
+  "comparison_completion_utc": "2026-11-20T22:06:25Z",
+  "reports_archive_sha256": "7789c92b8f0074b9b9d87a128dded472640082b202aedb02874344457b2f8042",
+  "results_document": "docs/discovery_multiscene_results.md",
+  "results_data": "docs/discovery_multiscene_results.json",
+  "source_history_on_pvc": "/results/code/discovery-source-history.tar.gz",
+  "source_history_sha256": "e774c98310a2be54eeb9ad547e8ae3bf77e04373ce71864a4c160d9cd1a24fdf",
+  "source_archives": {
+    "stage": {
+      "file": "discovery-stage-v2.tar.gz",
+      "archive_sha256": "4194e362929f7a3ca3b08938eb5bcf019698a8cfef4d1b1cf6041a73b52081b0"
+    },
+    "prepare": {
+      "file": "discovery-prepare-v4.tar.gz",
+      "archive_sha256": "e1faa872a0c227226587c451b9826ce46e349a5d350ee2180078f34b8def044c"
+    },
+    "pilot": {
+      "file": "discovery-pilot-source.tar.gz",
+      "archive_sha256": "42fda417df937fc3849f5bc69c8ae5bbc14a398a36aeb862d1572d159ed9357f"
+    },
+    "validate": {
+      "file": "discovery-validate-source.tar.gz",
+      "archive_sha256": "2ea9732f09c11320b6bac064a1775dcb27e7ec5c34768c486ad1c8cf60710146"
+    },
+    "history": {
+      "file": "discovery-source-history.tar.gz",
+      "archive_sha256": "e774c98310a2be54eeb9ad547e8ae3bf77e04373ce71864a4c160d9cd1a24fdf"
+    }
+  }
+}

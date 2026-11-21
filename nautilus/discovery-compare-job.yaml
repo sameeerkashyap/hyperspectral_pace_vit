@@ -1,0 +1,38 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pace-discovery-compare-v1
+  namespace: sea-meets-the-stars
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      priorityClassName: opportunistic
+      automountServiceAccountToken: false
+      containers:
+        - name: compare
+          image: python:3.11-slim-bookworm
+          command:
+            - /bin/sh
+            - -ec
+            - |
+              python -c 'import hashlib; from pathlib import Path; p=Path("/results/code/discovery-v5.tar.gz"); assert hashlib.file_digest(p.open("rb"),"sha256").hexdigest()=="d364ab0a1a406479d4430821a48f724b3118fc5fbfa49f99a58fbe6548cb6095"'
+              mkdir -p /source
+              tar -xzf /results/code/discovery-v5.tar.gz -C /source
+              python -m pip install --no-cache-dir numpy==2.4.6
+              mkdir -p /app/src
+              cp /source/discovery_compare.py /source/__init__.py /app/src/
+              cd /app
+              python -c 'from pathlib import Path; from src.discovery_compare import wait_for_runs; wait_for_runs(Path("/results/discovery-v1"),10)'
+              python -m src.discovery_compare /results/discovery-v1/*/discovery --output /results/discovery-v1/comparison.json
+          env:
+            - {name: OMP_NUM_THREADS, value: "2"}
+          resources:
+            requests: {cpu: "100m", memory: 512Mi, ephemeral-storage: 1Gi}
+            limits: {cpu: "120m", memory: 600Mi, ephemeral-storage: 2Gi}
+          volumeMounts:
+            - {name: results, mountPath: /results}
+      volumes:
+        - name: results
+          persistentVolumeClaim: {claimName: pace-experiment-results}

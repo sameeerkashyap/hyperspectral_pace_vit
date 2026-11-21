@@ -1,0 +1,35 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pace-discovery-validate-v3
+  namespace: sea-meets-the-stars
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      priorityClassName: opportunistic
+      automountServiceAccountToken: false
+      nodeSelector: {kubernetes.io/arch: amd64}
+      containers:
+        - name: validate
+          image: python:3.11-slim-bookworm
+          command:
+            - /bin/sh
+            - -ec
+            - |
+              python -c 'import hashlib; from pathlib import Path; p=Path("/results/code/discovery-validate-source.tar.gz"); assert hashlib.file_digest(p.open("rb"),"sha256").hexdigest()=="2ea9732f09c11320b6bac064a1775dcb27e7ec5c34768c486ad1c8cf60710146"'
+              mkdir -p /source
+              tar -xzf /results/code/discovery-validate-source.tar.gz -C /source
+              exec /bin/sh /source/discovery-validate.sh
+          resources:
+            requests: {cpu: "4", memory: 8Gi, ephemeral-storage: 12Gi}
+            limits: {cpu: "4", memory: 8Gi, ephemeral-storage: 16Gi}
+          volumeMounts:
+            - {name: results, mountPath: /results}
+            - {name: runtime, mountPath: /runtime}
+      volumes:
+        - name: results
+          persistentVolumeClaim: {claimName: pace-experiment-results}
+        - name: runtime
+          emptyDir: {sizeLimit: 16Gi}
